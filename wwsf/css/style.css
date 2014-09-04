@@ -5,13 +5,11 @@
   border: 0.5px;
   //max-height: 100%;
 }
-/*
-html{
 
-  padding-top: 10px;
-  padding-left: 10px;
+html{
+  margin: 0;
 }
-*/
+
 body{ 
   bottom: 10px;
 }
@@ -676,7 +674,8 @@ iframe {
     //background-color: rgba(120,120,120,0.3);
     z-index: 1;
     border: 1px solid black;
-
+    max-height: 85.72%;
+    padding-bottom: 85.72%
     font-size: 1em;
     font-weight: 700;
 
@@ -738,8 +737,8 @@ iframe {
     left: 0;
     //margin-left: -1px;
     width: 14.28%;
-    height: auto;
-
+    max-height: 85.72%;
+    padding-bottom: 85.72%
     //background-color: rgba(120,120,120,0.3);
     z-index: 1;
     //border: 1px solid black;
@@ -918,7 +917,7 @@ iframe {
     float: left;
     margin: auto 0;
     margin: 0;
-    padding-bottom: 19.8%;
+    padding-bottom: 6.49454545455%;
     width: 100%;
     //background-color: rgba(200,200,200,1);
     z-index: 1;
@@ -939,7 +938,7 @@ iframe {
 
     float: left;
     margin: auto 0;
-    padding-bottom: 19.8%;
+    padding-bottom: 6.49454545455%;
     width: 100%;
     //background-color: rgba(200,200,200,1);
     z-index: 1;
@@ -960,7 +959,7 @@ iframe {
 
     float: left;
     margin: auto 0;
-    padding-bottom: 19.8%;
+    padding-bottom: 6.49454545455%;
     width: 100%;
     //background-color: rgba(200,200,200,1);
     z-index: 1;
@@ -980,7 +979,7 @@ iframe {
 
     float: left;
     margin: auto 0;
-    padding-bottom: 19.8%;
+    padding-bottom: 6.49454545455%;
     width: 100%;
     //background-color: rgba(200,200,200,1);
     z-index: 1;
@@ -1002,7 +1001,7 @@ iframe {
 
     float: left;
     margin: auto 0;
-    padding-bottom: 19.8%;
+    padding-bottom: 6.49454545455%;
     width: 100%;
     //background-color: rgba(200,200,200,1);
     z-index: 1;
@@ -1023,7 +1022,7 @@ iframe {
 
     float: left;
     margin: auto 0;
-    padding-bottom: 19.8%;
+    padding-bottom: 6.49454545455%;
     width: 100%;
     //background-color: rgba(200,200,200,1);
     z-index: 1;
@@ -1044,7 +1043,7 @@ iframe {
 
     float: left;
     margin: auto 0;
-    padding-bottom: 19.8%;
+    padding-bottom: 6.49454545455%;
     width: 100%;
     //background-color: rgba(200,200,200,1);
     z-index: 1;
@@ -1065,7 +1064,7 @@ iframe {
 
     float: left;
     margin: auto 0;
-    padding-bottom: 19.8%;
+    padding-bottom: 6.49454545455%;
     width: 100%;
     //background-color: rgba(200,200,200,1);
     z-index: 1;
@@ -1086,7 +1085,7 @@ iframe {
 
     float: left;
     margin: auto 0;
-    padding-bottom: 19.8%;
+    padding-bottom: 6.49454545455%;
     width: 100%;
     //background-color: rgba(200,200,200,1);
     z-index: 1;
@@ -1107,7 +1106,7 @@ iframe {
 
     float: left;
     margin: auto 0;
-    padding-bottom: 19.8%;
+    padding-bottom: 6.49454545455%;
     width: 100%;
     //background-color: rgba(200,200,200,1);
     z-index: 1;
