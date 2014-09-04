@@ -5,8 +5,13 @@
   border: 0.5px;
   //max-height: 100%;
 }
+/*
+html{
 
-
+  padding-top: 10px;
+  padding-left: 10px;
+}
+*/
 body{ 
   bottom: 10px;
 }
@@ -26,7 +31,12 @@ main {
 
 }
 
-
+h2 {
+  padding-top: 20px;
+  padding-left: 10px;
+  font-size: 1.6em;
+  position: absolute;
+}
 h3 {
   padding-top: 20px;
   padding-left: 10px;
@@ -532,6 +542,8 @@ iframe {
     //margin-left: 1px;
     width: 14.28%;    
     padding-bottom: 14.28%;
+        max-height: 14.28%;
+
     //background-color: rgba(0,0,0,1);
 
 }
@@ -634,15 +646,17 @@ iframe {
     float: left;
     margin: auto 0;
     padding: 0;
-    margin-left: -1px;
+    //margin-left: -1px;
 	  width: 28.56%;
-    padding-bottom: 14.28%;
+    max-height: 14.28%;
     border: solid 1px black;
+    margin-bottom: 0;
     //background-color: rgba(120,120,120,0.3);
     z-index: 1;
 
     font-size: 1.5em;
     font-weight: 700;
+    overflow: hidden;
 
 }
 
@@ -657,11 +671,11 @@ iframe {
     float: left;
     margin: auto 0;
     padding: 30px;
-    margin-left: -1px;
+    //margin-left: -1px;
 	   width: 57.12%;
     //background-color: rgba(120,120,120,0.3);
     z-index: 1;
-    //border: 1px solid black;
+    border: 1px solid black;
 
     font-size: 1em;
     font-weight: 700;
@@ -725,9 +739,10 @@ iframe {
     //margin-left: -1px;
     width: 14.28%;
     height: auto;
+
     //background-color: rgba(120,120,120,0.3);
     z-index: 1;
-
+    //border: 1px solid black;
     font-size: 1.5em;
     font-weight: 700;
 }
@@ -890,20 +905,20 @@ iframe {
 }
 
 .nav-item1 {
-	font-size: 0.5em;
-	position: relative;
-	display: inline-block;
+  	font-size: 0.5em;
+  	position: relative;
+  	display: inline-block;
   	box-sizing:border-box;
   	-moz-box-sizing:border-box;
   	-webkit-box-sizing:border-box;
   	top: 0;
   	left: 0;
     border: 1px solid black;
-
+    clear:both;
     float: left;
     margin: auto 0;
+    margin: 0;
     padding-bottom: 19.8%;
-    margin-left: -1px;
     width: 100%;
     //background-color: rgba(200,200,200,1);
     z-index: 1;
@@ -920,11 +935,11 @@ iframe {
     top: 0;
     left: 0;
     border: 1px solid black;
+    clear:both;
 
     float: left;
     margin: auto 0;
     padding-bottom: 19.8%;
-    margin-left: -1px;
     width: 100%;
     //background-color: rgba(200,200,200,1);
     z-index: 1;
@@ -941,11 +956,11 @@ iframe {
     top: 0;
     left: 0;
     border: 1px solid black;
+    clear:both;
 
     float: left;
     margin: auto 0;
     padding-bottom: 19.8%;
-    margin-left: -1px;
     width: 100%;
     //background-color: rgba(200,200,200,1);
     z-index: 1;
@@ -961,11 +976,11 @@ iframe {
     top: 0;
     left: 0;
     border: 1px solid black;
+    clear:both;
 
     float: left;
     margin: auto 0;
     padding-bottom: 19.8%;
-    margin-left: -1px;
     width: 100%;
     //background-color: rgba(200,200,200,1);
     z-index: 1;
@@ -983,11 +998,11 @@ iframe {
     top: 0;
     left: 0;
     border: 1px solid black;
+    clear:both;
 
     float: left;
     margin: auto 0;
     padding-bottom: 19.8%;
-    margin-left: -1px;
     width: 100%;
     //background-color: rgba(200,200,200,1);
     z-index: 1;
@@ -1009,7 +1024,6 @@ iframe {
     float: left;
     margin: auto 0;
     padding-bottom: 19.8%;
-    margin-left: -1px;
     width: 100%;
     //background-color: rgba(200,200,200,1);
     z-index: 1;
@@ -1031,7 +1045,6 @@ iframe {
     float: left;
     margin: auto 0;
     padding-bottom: 19.8%;
-    margin-left: -1px;
     width: 100%;
     //background-color: rgba(200,200,200,1);
     z-index: 1;
@@ -1053,7 +1066,6 @@ iframe {
     float: left;
     margin: auto 0;
     padding-bottom: 19.8%;
-    margin-left: -1px;
     width: 100%;
     //background-color: rgba(200,200,200,1);
     z-index: 1;
@@ -1075,7 +1087,6 @@ iframe {
     float: left;
     margin: auto 0;
     padding-bottom: 19.8%;
-    margin-left: -1px;
     width: 100%;
     //background-color: rgba(200,200,200,1);
     z-index: 1;
@@ -1097,7 +1108,6 @@ iframe {
     float: left;
     margin: auto 0;
     padding-bottom: 19.8%;
-    margin-left: -1px;
     width: 100%;
     //background-color: rgba(200,200,200,1);
     z-index: 1;

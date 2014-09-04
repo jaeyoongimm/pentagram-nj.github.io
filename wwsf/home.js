@@ -36,7 +36,12 @@ function initialize() {
     mapTypeControlOptions: {
       mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
     },
-    mapTypeId: MY_MAPTYPE_ID
+    mapTypeId: MY_MAPTYPE_ID,
+    zoomControl: true,
+    zoomControlOptions: {
+        style: google.maps.ZoomControlStyle.DEFAULT,
+        position: google.maps.ControlPosition.LEFT_BOTTOM
+    },
   };
 
   map = new google.maps.Map(document.getElementById('map-canvas'),
@@ -200,6 +205,20 @@ google.maps.event.addDomListener(window, "resize", function() {
     infowindow.open(map);
     });
 */
+
+
+//marker 1
+google.maps.event.addListener(marker_one, 'mouseover', function() {
+    marker_one.setIcon(largeOne);
+    this.setOptions({zIndex:999+1});
+
+});
+google.maps.event.addListener(marker_one, 'mouseout', function() {
+    marker_one.setIcon(iconOne);
+});
+google.maps.event.addListener(marker_one, 'click', function() {
+    window.location.href = 'project1.html'
+});
 
 
 
