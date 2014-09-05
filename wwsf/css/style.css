@@ -906,6 +906,7 @@ iframe {
     //margin-left: -1px;
     width: 28.60%;
     height: auto;
+    border: 1px solid black;
     //background-color: rgba(120,120,120,0.3);
     z-index: 1;
    	height: 1200px;
