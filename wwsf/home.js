@@ -185,8 +185,9 @@ function initialize() {
   marker_eight.setAnimation(google.maps.Animation.DROP);
   marker_nine.setAnimation(google.maps.Animation.DROP);
   marker_ten.setAnimation(google.maps.Animation.DROP);
-  marker_eleven.setAnimation(google.maps.Animation.DROP);
 
+   marker_eleven.setAnimation(google.maps.Animation.BOUNCE);
+  setTimeout(function(){ marker_eleven.setAnimation(null); }, 2250);
 
 google.maps.event.addDomListener(window, "resize", function() {
    var center = map.getCenter();
