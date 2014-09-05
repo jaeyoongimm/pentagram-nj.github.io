@@ -38,7 +38,7 @@ h2 {
 h3 {
   padding-top: 20px;
   padding-left: 10px;
-  font-size: 1.6em;
+  font-size: 1.4em;
 }
 
 audio {
@@ -1174,7 +1174,7 @@ iframe {
 
 .colorband-one {
   width: 100%;
-  height: 11.53%;
+  height: 13.888888889%;
   background-color: rgba(250, 166, 62, 1);
   float: left;
   margin-top: 0;
@@ -1197,7 +1197,7 @@ iframe {
 
 .colorband-one-mod {
   width: 200%;
-  height: 11.53%;
+  height: 13.888888889%;
   background-color: rgba(250, 166, 62, 1);
   float: left;
   margin-top: 0;
@@ -1209,7 +1209,7 @@ iframe {
 
 .colorband-two {
 	width: 100%;
-  height: 11.53%;
+  height: 13.888888889%;
   background-color: rgba(207, 211, 39, 1);
 	float: left;
 	margin-top: 0;
@@ -1221,7 +1221,7 @@ iframe {
 
 .colorband-three {
 	width: 100%;
-  height: 11.53%;
+  height: 13.888888889%;
   background-color: rgba(185, 81, 159, 1);
 	float: left;
 	margin-top: 0;
@@ -1232,7 +1232,7 @@ iframe {
 
 .colorband-four {
 	width: 100%;
-  height: 11.53%;
+  height: 13.888888889%;
   background-color: rgba(110, 205, 221, 1);
 	float: left;
 	margin-top: 0;
@@ -1243,8 +1243,9 @@ iframe {
 
 .colorband-five {
   width: 100%;
-  height: 11.53%;
-  background-color: rgba(86, 169, 222, 1);
+  height: 13.888888889%;
+    background-color: rgba(237, 31, 36, 1);
+
   float: left;
   margin-top: 0;
   z-index: -1;
@@ -1254,7 +1255,7 @@ iframe {
 
 .colorband-six {
   width: 100%;
-  height: 11.53%;
+  height: 13.888888889%;
   background-color: rgba(240, 85, 134, 1);
   float: left;
   margin-top: 0;
@@ -1266,8 +1267,12 @@ iframe {
 
 .colorband-seven {
   width: 100%;
-  height: 11.53%;
-  background-color: rgba(237, 31, 36, 1);
+  height: 13.888888889%;
+
+    background-color: rgba(86, 169, 222, 1);
+
+
+
   float: left;eight
   margin-top: 0;
   z-index: -1;
@@ -1278,7 +1283,7 @@ iframe {
 
 .colorband-eight {
   width: 100%;
-  height: 11.53%;
+  height: 13.888888889%;
   background-color: rgba(105, 189, 69, 1);
   float: left;
   margin-top: 0;
@@ -1290,7 +1295,7 @@ iframe {
 
 .colorband-nine {
   width: 100%;
-  height: 11.53%;
+  height: 13.888888889%;
   background-color: rgba(243, 236, 25, 1);
   float: left;
    margin-top: 0;
@@ -1301,7 +1306,7 @@ iframe {
 
 .colorband-ten {
   width: 100%;
-  height: 11.53%;
+  height: 13.888888889%;
   background-color: rgba(216, 153, 196, 1);
   float: left;
    margin-top: 0;
