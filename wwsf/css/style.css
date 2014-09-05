@@ -68,6 +68,14 @@ audio {
 
 .calendaroverlay {
 
+/*
+      -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+*/
+
   opacity: 0;
   pointer-events: none;
   z-index: 900;
@@ -113,6 +121,8 @@ audio {
 
 
 .overlay {
+
+
 
   opacity: 0;
   pointer-events: none;
