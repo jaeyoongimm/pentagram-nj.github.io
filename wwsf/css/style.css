@@ -333,10 +333,10 @@ iframe {
 }
 
 .square_z {
+    pointer-events: none;
     z-index: 1;
-
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
     border: 1px solid black;
     box-sizing:border-box;
     -moz-box-sizing:border-box;
