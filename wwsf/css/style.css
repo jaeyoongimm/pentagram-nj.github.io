@@ -134,9 +134,14 @@ audio {
 
 }
 
-.open, .close, .calclose {
+.open, .close, .calclose, .gotohome {
   cursor: pointer;
 }
+
+.gotohome{ }
+
+
+
 
 .information {
 
