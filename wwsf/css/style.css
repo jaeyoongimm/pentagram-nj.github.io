@@ -718,7 +718,8 @@ iframe {
     //background-color: rgba(120,120,120,0.3);
     z-index: 1;
     border: 1px solid black;
-    padding-bottom: 89.5%;
+    padding-bottom: 86.9%;
+    bottom: 0;
     font-size: 1em;
     font-weight: 700;
 
@@ -943,6 +944,7 @@ iframe {
     //margin-left: -1px;
     width: 28.60%;
     border: 1px solid black;
+    bottom: 0;
     padding-bottom: 86.9%;
     //background-color: rgba(120,120,120,0.3);
     z-index: 1;
