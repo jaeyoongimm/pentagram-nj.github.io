@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 	})
 	$(".nav-item1").mouseleave(function(){
-		 $(".colorband-one").css("height", "11.53%");
+		 $(".colorband-one").css("height", "13.888888889%");
 	})
 
 
@@ -19,7 +19,7 @@ $(document).ready(function(){
 
 	})
 	$(".nav-item2").mouseleave(function(){
-		 $(".colorband-two").css("height", "11.53%");
+		 $(".colorband-two").css("height", "13.888888889%");
 	})
 
 
@@ -29,7 +29,7 @@ $(document).ready(function(){
 
 	})
 	$(".nav-item3").mouseleave(function(){
-		 $(".colorband-three").css("height", "11.53%");
+		 $(".colorband-three").css("height", "13.888888889%");
 	})
 
 
@@ -39,7 +39,7 @@ $(document).ready(function(){
 
 	})
 	$(".nav-item4").mouseleave(function(){
-		 $(".colorband-four").css("height", "11.53%");
+		 $(".colorband-four").css("height", "13.888888889%");
 	})
 
 
@@ -50,7 +50,7 @@ $(document).ready(function(){
 	})
 
 	$(".nav-item5").mouseleave(function(){
-		 $(".colorband-five").css("height", "11.53%");
+		 $(".colorband-five").css("height", "13.888888889%");
 	})
 
 
@@ -61,7 +61,7 @@ $(document).ready(function(){
 	})
 
 	$(".nav-item6").mouseleave(function(){
-		 $(".colorband-six").css("height", "11.53%");
+		 $(".colorband-six").css("height", "13.888888889%");
 	})
 
 
@@ -72,7 +72,7 @@ $(document).ready(function(){
 	})
 
 	$(".nav-item7").mouseleave(function(){
-		 $(".colorband-seven").css("height", "11.53%");
+		 $(".colorband-seven").css("height", "13.888888889%");
 	})
 
 
@@ -82,7 +82,7 @@ $(document).ready(function(){
 	})
 
 	$(".nav-item8").mouseleave(function(){
-		 $(".colorband-eight").css("height", "11.53%");
+		 $(".colorband-eight").css("height", "13.888888889%");
 	})
 
 
@@ -92,7 +92,7 @@ $(document).ready(function(){
 	})
 
 	$(".nav-item9").mouseleave(function(){
-		 $(".colorband-nine").css("height", "11.53%");
+		 $(".colorband-nine").css("height", "13.888888889%");
 	})
 
 
@@ -102,8 +102,21 @@ $(document).ready(function(){
 	})
 
 	$(".nav-item10").mouseleave(function(){
-		 $(".colorband-ten").css("height", "11.53%");
+		 $(".colorband-ten").css("height", "13.888888889%");
 	})
+
+
+	$(".nav-item11").mouseenter(function(){
+		 $(".colorband-eleven").css("height", "100%");
+		 $(this).css("color","white");
+
+	})
+
+	$(".nav-item11").mouseleave(function(){
+		 $(".colorband-eleven").css("height", "13.888888889%");
+		 $(this).css("color", "black");
+	})
+
 
 });
 

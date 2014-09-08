@@ -30,15 +30,25 @@ main {
 }
 
 h2 {
-  padding-top: 20px;
-  padding-left: 10px;
+  padding-top: 25px;
+  padding-left: 25px;
   font-size: 1.6em;
   position: absolute;
 }
+
+h5 {
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 0.8em;
+  position: absolute;
+}
+
 h3 {
   padding-top: 20px;
   padding-left: 10px;
   font-size: 1.4em;
+  font-weight: 700;
 }
 
 h4 {
@@ -1281,11 +1291,9 @@ iframe {
   position: absolute;
 
 }
-
-.colorband-one-end {
-  display: none;
+.colorband-one-a {
   width: 100%;
-  height: 100%%;
+  height: 6.9444444445%;
   background-color: rgba(250, 166, 62, 1);
   float: left;
   margin-top: 0;
@@ -1294,21 +1302,21 @@ iframe {
 
 }
 
-.colorband-one-mod {
-  width: 200%;
-  height: 13.888888889%;
-  background-color: rgba(250, 166, 62, 1);
-  float: left;
-  margin-top: 0;
-  z-index: 900;
-  position: absolute;
-
-}
 
 
 .colorband-two {
   width: 100%;
   height: 13.888888889%;
+  background-color: rgba(207, 211, 39, 1);
+  float: left;
+  margin-top: 0;
+  z-index: -1;
+  position: absolute;
+
+}
+.colorband-two-a {
+  width: 100%;
+  height: 6.9444444445%;
   background-color: rgba(207, 211, 39, 1);
   float: left;
   margin-top: 0;
