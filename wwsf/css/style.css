@@ -601,8 +601,8 @@ iframe {
 
 .two-squares {
     z-index: -1;
-    width: 28.60%;
-    padding-bottom: 14.28%;
+    //width: 28.60%;
+    //padding-bottom: 14.28%;
     position: relative;
     display: inline-block;
     border: 1px solid black;
