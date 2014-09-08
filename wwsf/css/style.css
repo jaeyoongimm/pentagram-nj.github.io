@@ -72,6 +72,14 @@ h8 {
     font-weight: 400;
 }
 
+#audio-button {
+    cursor: pointer;
+}
+
+#ts-button {
+    cursor: pointer;
+}
+
 
 audio {
   width: 100%;
@@ -1340,6 +1348,9 @@ iframe {
 }
 
 
+
+
+
 .colorband-three {
   width: 100%;
   height: 13.888888889%;
@@ -1350,6 +1361,17 @@ iframe {
   position: absolute;
   
 }
+.colorband-three-a {
+  width: 100%;
+  height: 6.9444444445%;
+  background-color: rgba(185, 81, 159, 1);
+  float: left;
+  margin-top: 0;
+  z-index: -1;
+  position: absolute;
+  
+}
+
 
 .colorband-four {
   width: 100%;
