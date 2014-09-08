@@ -638,6 +638,10 @@ iframe {
 
 }
 
+#slider-title {
+    font-size: 1.2em;
+    padding-top: 3px;
+}
 
 
 .square-noborder {
