@@ -14,7 +14,7 @@ html{
 
 body{ 
   bottom: 10px;
-  max-width: 1200px;
+  max-width: 960px;
   //margin: 0 auto;
   //background-color: white;
 }
@@ -158,13 +158,15 @@ a:hover {
 
 .g-overlay {
 
+    max-width: 960px;
 
   opacity: 0;
   pointer-events: none;
   z-index: 999;
   position: absolute;
   width: 100%;
-  padding-bottom: 86.9%;
+  height: 100%;
+  //padding-bottom: 86.9%;
   background-color: rgba(0,0,0,0.8);
 
 }
@@ -185,7 +187,7 @@ a:hover {
   z-index: 999;
   position: absolute;
   width: 100%;
-  padding-bottom: 14.28%;
+  //padding-bottom: 14.28%;
   background-color: rgba(0,0,0,0.8);
 
 }
