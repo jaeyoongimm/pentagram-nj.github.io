@@ -81,13 +81,8 @@ h8 {
     line-height: 0.3em;
 }
 
-#audio-button {
-    cursor: pointer;
-}
 
-#ts-button {
-    cursor: pointer;
-}
+
 
 
 audio {
@@ -103,6 +98,69 @@ a {
 a:hover {
     color: black;
 }
+
+
+#gallery-button, #video-button, #audio-button, #ts-button {
+    cursor: pointer;
+}
+
+
+/*
+iframe {
+  background-color: #fff;
+}
+*/
+/* PROJECT PAGE */
+
+/* VIDEO BUTTON */
+
+
+.video-overlay {
+
+  opacity: 0;
+  pointer-events: none;
+  z-index: 900;
+  position: absolute;
+  width: 100%;
+  padding-bottom: 86%;
+  background-color: rgba(0,0,0,0.8);
+
+}
+
+
+
+/* 360 BUTTON */ 
+
+.ts-overlay {
+
+  opacity: 0;
+  pointer-events: none;
+  z-index: 900;
+  position: absolute;
+  width: 100%;
+  padding-bottom: 86%;
+  background-color: rgba(0,0,0,0.8);
+
+}
+
+
+
+/* GALLERY BUTTON*/
+.gallery-overlay {
+
+  opacity: 0;
+  pointer-events: none;
+  z-index: 900;
+  position: absolute;
+  width: 100%;
+  padding-bottom: 86%;
+  background-color: rgba(0,0,0,0.8);
+
+}
+
+
+
+
 
 
 
@@ -272,14 +330,6 @@ a:hover {
 /*    */
 
 
-
-
-
-/*
-iframe {
-  background-color: #fff;
-}
-*/
 
 
 

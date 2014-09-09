@@ -31,95 +31,127 @@
 	</style>
 
 	<script>
-	/*		
 
-		$(document).ready(function(){
-			   
-			   var wH = $(window).height();
-
-			   var w1 = wH * 0.8572;
-
-			   var w2 = wH * 0.0649454545;
-
-			   $('body, .blog, .left-nav, .right-nav').css({height: w1});
-
-			   $('.nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6, .nav-item7, .nav-item8, .nav-item9, .nav-item10, .nav-item11').css({height: w2});
-
-		});
-
-*/
 
 	</script>
 
-<!--
-    <script type="text/javascript"> 
 
 
-		$(document).ready(function(){
+	<script> 
+
+      $( document ).ready(function() {
 
 
-			$(".left-nav").click(function(){
+      	//VIDEO
 
-				#(this).css({opacity: 0.5}, 200);
+          $( "#video-button" ).click(function( event ) {
+       
+              $( ".video-overlay" ).css({
+                  'visibility' : 'visible',
+                   'opacity' : '1',
+                   'pointer-events' : 'auto',
+                }),
 
-			})
+           $( ".info-text" ).css({
+                   'pointer-events' : 'auto',
+                });   
 
-		  $(".nav-item1").mouseenter(function(){
-		  	$(".colorband-one").css({height: 100px}, 100);
-		  	})
-		  $(".nav-item1").mouseleave(function(){
-		  	$(".colorband-one").animate({opacity: 0}, 500);
-		  	})
+          });
 
-		}
-
-});
+          $( ".video-close" ).click(function( event ) {
+       
+              $( ".video-overlay" ).css({
 
 
+                'visibility' : 'hidden',
+                  'opacity' : '0',
+                   'pointer-events' : 'none',
+                }),
 
-    </script>
+           $( ".info-text" ).css({
+                   'pointer-events' : 'none',
+                });     
 
--->
-<!--
 
-    <script type="text/javascript">
-      $(document).ready(function() {
+          });
 
-         $("#myblog").load('http://entirelynew.net/wwsf/blog/');
+
+
+          // 360
+
+
+          $( "#ts-button" ).click(function( event ) {
+       
+
+              $( ".ts-overlay" ).css({
+                  'visibility' : 'visible',
+                   'opacity' : '1',
+                   'pointer-events' : 'auto',
+                }),
+
+           $( ".info-text" ).css({
+                   'pointer-events' : 'auto',
+                });   
+
+          });
+
+          $( ".ts-close" ).click(function( event ) {
+       
+              $( ".ts-overlay" ).css({
+
+
+                'visibility' : 'hidden',
+                  'opacity' : '0',
+                   'pointer-events' : 'none',
+                }),
+
+           $( ".info-text" ).css({
+                   'pointer-events' : 'none',
+                });     
+
+
+          });
+
+
+          // Gallery
+
+
+          $( "#gallery-button" ).click(function( event ) {
+       
+
+              $( ".gallery-overlay" ).css({
+                  'visibility' : 'visible',
+                   'opacity' : '1',
+                   'pointer-events' : 'auto',
+                }),
+
+           $( ".info-text" ).css({
+                   'pointer-events' : 'auto',
+                });   
+
+          });
+
+          $( ".gallery-close" ).click(function( event ) {
+       
+              $( ".gallery-overlay" ).css({
+
+
+                'visibility' : 'hidden',
+                  'opacity' : '0',
+                   'pointer-events' : 'none',
+                }),
+
+           $( ".info-text" ).css({
+                   'pointer-events' : 'none',
+                });     
+
+
+          });
+
+             
       });
-
-
-
-
-
-    </script> -->
-<!--
-
-	<script type="text/javascript">
-	    $(document).ready(function(){
-	    $.ajaxSetup({cache:false});
-	    $("h2 a").click(function(){
-	        var post_id = $(this).attr("rel")
-	        $("#your_post_here").html("loading...");
-	        $("#your_post_here").load("http://<?php echo $_SERVER[HTTP_HOST]; ?>/triqui-ajax/",{id:post_id});
-	        return false;
-	    });
-	});
+            
 	</script>
--->
-
-		<script> 
-
-		$(document).ready(function(){
-		    $('#content').hover(function() {
-		        $("#content").addClass('transition');
-		    
-		    }, function() {oveClass('transition');
-		    });
-		});
-		        $("#content").rem
-
-			</script>
 
 
 
@@ -131,15 +163,59 @@
 
 
 
-  	<!-- overlay gallery --> 
+  	<!-- video overlay --> 
 
+    <div class="video-overlay">
 
-
-    <div class="g-overlay">
-
-    	             <div class="square_w_image" style="float: right;">
-              <img class="close" src="assets/icons/close_icon.png" style="width:100%; height:100%; z-index: 10; position: absolute;" />
+             <div class="square_w_image" style="float: right;">
+              <img class="video-close" src="assets/icons/close_icon.png" style="width:100%; height:100%; z-index: 10; position: absolute;" />
             </div>
+
+      <div class="information">
+
+        Video content will be here.
+
+      </div>
+
+    </div>
+
+
+
+
+
+  	<!-- ts overlay --> 
+
+    <div class="ts-overlay">
+
+             <div class="square_w_image" style="float: right;">
+              <img class="ts-close" src="assets/icons/close_icon.png" style="width:100%; height:100%; z-index: 10; position: absolute;" />
+            </div>
+
+      <div class="information">
+
+        360 content will be here.
+
+      </div>
+
+    </div>
+
+
+
+  	<!-- gallery overlay --> 
+  	  <div class="gallery-overlay">
+
+             <div class="square_w_image" style="float: right;">
+              <img class="gallery-close" src="assets/icons/close_icon.png" style="width:100%; height:100%; z-index: 10; position: absolute;" />
+            </div>
+
+      <div class="information">
+
+        Gallery content will be here.
+
+      </div>
+
+    </div>
+
 
 
 <!--
@@ -437,7 +513,7 @@
 
 					<img src="assets/slides/slide1.png" style="width:100%; height: 100%;" />
 					<div style="width: 100%; font-size: 2em; position: absolute; text-align: center; bottom: 55%;">
-					<h1>Gallery</h1>
+					<h1 id="gallery-button">Gallery</h1>
 				</div>
 				</div>    
 
