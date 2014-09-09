@@ -161,7 +161,8 @@ a:hover {
 
     max-width: 1200px;
 
-  opacity: 0;
+    visibility: hidden;
+    opacity: 0;
   pointer-events: none;
   z-index: 999;
   position: absolute;
@@ -182,6 +183,7 @@ a:hover {
 .overlay {
 
 
+    visibility: hidden;
 
   opacity: 0;
   pointer-events: none;

@@ -121,6 +121,7 @@
        
 
               $( ".overlay" ).css({
+                  'visibility' : 'visible',
                    'opacity' : '1',
                    'pointer-events' : 'auto',
                 }),
@@ -134,7 +135,10 @@
           $( ".close" ).click(function( event ) {
        
               $( ".overlay" ).css({
-                   'opacity' : '0',
+
+
+                'visibility' : 'hidden',
+                  'opacity' : '0',
                    'pointer-events' : 'none',
                 }),
 
@@ -157,7 +161,8 @@
        
 
               $( ".calendaroverlay" ).css({
-                   'opacity' : '1',
+                  'opacity' : '1',
+                   'visibility' : 'visible',
                    'pointer-events' : 'auto'
                 });
           });
@@ -165,15 +170,14 @@
 
           $( ".calclose" ).click(function( event ) {
        
-            alert("hello!");
 
-       /*
               $( ".calendaroverlay" ).css({
                    'opacity' : '0',
-                   'pointer-events' : 'none',
+                   'visibility' : 'hidden',
+                   'pointer-events' : 'none'
                 })  
 
-*/
+
           });
              
       });
