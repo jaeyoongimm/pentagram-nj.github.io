@@ -78,6 +78,7 @@ h7 {
 h8 {
     font-size: 0.9em;
     font-weight: 400;
+    line-height: 0.3em;
 }
 
 #audio-button {
@@ -187,7 +188,7 @@ a:hover {
   z-index: 999;
   position: absolute;
   width: 100%;
-  //padding-bottom: 14.28%;
+  padding-bottom: 14.28%;
   background-color: rgba(0,0,0,0.8);
 
 }
@@ -1001,6 +1002,7 @@ iframe {
 
 .right-nav {
 
+    background-color: white;
   position: relative;
     box-sizing:border-box;
     -moz-box-sizing:border-box;
