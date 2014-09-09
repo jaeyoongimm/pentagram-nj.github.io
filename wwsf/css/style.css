@@ -122,6 +122,8 @@ iframe {
   z-index: 900;
   position: absolute;
   width: 100%;
+    max-width: 1200px;
+
   padding-bottom: 86%;
   background-color: rgba(0,0,0,0.8);
 
@@ -138,6 +140,7 @@ iframe {
   z-index: 900;
   position: absolute;
   width: 100%;
+  max-width: 1200px;
   padding-bottom: 86%;
   background-color: rgba(0,0,0,0.8);
 
@@ -153,6 +156,8 @@ iframe {
   z-index: 900;
   position: absolute;
   width: 100%;
+    max-width: 1200px;
+
   padding-bottom: 86%;
   background-color: rgba(0,0,0,0.8);
 
