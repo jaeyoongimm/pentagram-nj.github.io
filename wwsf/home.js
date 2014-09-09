@@ -63,10 +63,11 @@ function initialize() {
   var myLatlng5 = new google.maps.LatLng(32.0878802,34.797246);
   var myLatlng6 = new google.maps.LatLng(44.9397075,-93.1060534);
   var myLatlng7 = new google.maps.LatLng(42.4422877,-76.4983749);
-  var myLatlng8 = new google.maps.LatLng(38.008336, -41.599441);
+  var myLatlng8 = new google.maps.LatLng(17.1490283, -36.6693794,5);
   var myLatlng9 = new google.maps.LatLng(34.0204989,-118.4117325);
   var myLatlng10 = new google.maps.LatLng(45.5601451,-73.7120832);
   var myLatlng11 = new google.maps.LatLng(40.7212149,-73.9970065);
+  var myLatlng12 = new google.maps.LatLng(40.6211925,22.9460273,13);
 
 
   var iconOne = 'icon-1.png';
@@ -173,6 +174,14 @@ function initialize() {
       //title:"Hello World!",
       icon: iconEleven
   });
+
+  var marker_six_second = new google.maps.Marker({
+      position: myLatlng12,
+      map: map,
+      //title:"Hello World!",
+      icon: iconSix
+  });
+
 
 
   marker_one.setAnimation(google.maps.Animation.DROP);
@@ -344,6 +353,18 @@ google.maps.event.addListener(marker_eleven, 'click', function() {
     window.location.href = 'project11.html'
 });
 
+//marker 6_second
+
+google.maps.event.addListener(marker_six_second, 'mouseover', function() {
+    marker_six_second.setIcon(largeSix);
+    this.setOptions({zIndex:999+1});
+});
+google.maps.event.addListener(marker_six_second, 'mouseout', function() {
+    marker_six_second.setIcon(iconSix);
+});
+google.maps.event.addListener(marker_six_second, 'click', function() {
+    window.location.href = 'project6.html'
+});
 
 
 
