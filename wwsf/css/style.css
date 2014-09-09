@@ -55,7 +55,7 @@ h5 {
 h3 {
   padding-top: 20px;
   padding-left: 10px;
-  font-size: 1.4em;
+  font-size: 1.25em;
   font-weight: 700;
 }
 
@@ -1378,6 +1378,17 @@ iframe {
   position: absolute;
   
 }
+.colorband-three-a {
+  width: 100%;
+  height: 6.9444444445%;
+  background-color: rgba(185, 81, 159, 1);
+  float: left;
+  margin-top: 0;
+  z-index: -1;
+  position: absolute;
+  
+}
+
 
 .colorband-four {
   width: 100%;
@@ -1389,6 +1400,18 @@ iframe {
   position: absolute;
 
 }
+.colorband-four-a {
+  width: 100%;
+  height: 6.9444444445%;
+  background-color: rgba(110, 205, 221, 1);
+  float: left;
+  margin-top: 0;
+  z-index: -1;
+  position: absolute;
+
+}
+
+
 
 .colorband-five {
   width: 100%;
@@ -1402,9 +1425,34 @@ iframe {
 
 }
 
+.colorband-five-a {
+  width: 100%;
+  height: 6.9444444445%;
+    background-color: rgba(237, 31, 36, 1);
+
+  float: left;
+  margin-top: 0;
+  z-index: -1;
+  position: absolute;
+
+}
+
+
+
 .colorband-six {
   width: 100%;
   height: 13.888888889%;
+  background-color: rgba(240, 85, 134, 1);
+  float: left;
+  margin-top: 0;
+  z-index: -1;
+  position: absolute;
+
+}
+
+.colorband-six-a {
+  width: 100%;
+  height: 6.9444444445%;
   background-color: rgba(240, 85, 134, 1);
   float: left;
   margin-top: 0;
@@ -1417,11 +1465,7 @@ iframe {
 .colorband-seven {
   width: 100%;
   height: 13.888888889%;
-
     background-color: rgba(86, 169, 222, 1);
-
-
-
   float: left;
   margin-top: 0;
   z-index: -1;
@@ -1429,6 +1473,16 @@ iframe {
 
 }
 
+.colorband-seven-a {
+  width: 100%;
+  height: 6.9444444445%;
+    background-color: rgba(86, 169, 222, 1);
+  float: left;
+  margin-top: 0;
+  z-index: -1;
+  position: absolute;
+
+}
 
 .colorband-eight {
   width: 100%;
@@ -1440,6 +1494,18 @@ iframe {
   position: absolute;
 
 }
+
+.colorband-eight-a {
+  width: 100%;
+  height: 6.9444444445%;
+  background-color: rgba(105, 189, 69, 1);
+  float: left;
+  margin-top: 0;
+  z-index: -1;
+  position: absolute;
+
+}
+
 
 
 .colorband-nine {
@@ -1455,7 +1521,7 @@ iframe {
 
 .colorband-nine-a {
   width: 100%;
-  height: 13.888888889%;
+  height: 6.9444444445%;
   background-color: rgba(243, 236, 25, 1);
   float: left;
    margin-top: 0;
@@ -1463,6 +1529,7 @@ iframe {
   position: absolute;
   
 }
+
 
 
 .colorband-ten {
@@ -1475,6 +1542,18 @@ iframe {
   position: absolute;
   
 }
+.colorband-ten-a {
+  width: 100%;
+  height: 6.9444444445%;
+  background-color: rgba(216, 153, 196, 1);
+  float: left;
+   margin-top: 0;
+   z-index: -1;
+  position: absolute;
+  
+}
+
+
 
 .colorband-eleven {
   width: 100%;
@@ -1487,5 +1566,14 @@ iframe {
   
 }
 
-
+.colorband-eleven-a {
+  width: 100%;
+  height: 6.9444444445%;
+  background-color: rgba(0,0,0,1);
+  float: left;
+   margin-top: 0;
+   z-index: -1;
+  position: absolute;
+  
+}
 
