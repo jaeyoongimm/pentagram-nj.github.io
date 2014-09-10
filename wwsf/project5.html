@@ -17,109 +17,157 @@
 
   	<link rel="stylesheet" type="text/css" href="css/style.css">
 
+    <link href='css/panorama_viewer.css' rel='stylesheet' type='text/css'>
+
+
   	<!-- Javascript -->
     <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
     <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-	<script src="project.js"></script>
+  	<script src="project.js"></script>
+    <script type="text/javascript" src="js/jquery.panorama_viewer.min.js"></script>
+	
 
-	<style>
+
+
+  <style>
 	html, body, main { bottom: 0; margin: 0 auto; padding-bottom: 0;}
 
 
 	</style>
 
 	<script>
-	/*		
 
-		$(document).ready(function(){
-			   
-			   var wH = $(window).height();
-
-			   var w1 = wH * 0.8572;
-
-			   var w2 = wH * 0.0649454545;
-
-			   $('body, .blog, .left-nav, .right-nav').css({height: w1});
-
-			   $('.nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6, .nav-item7, .nav-item8, .nav-item9, .nav-item10, .nav-item11').css({height: w2});
-
-		});
-
-*/
 
 	</script>
 
-<!--
-    <script type="text/javascript"> 
-
-
-		$(document).ready(function(){
-
-
-			$(".left-nav").click(function(){
-
-				#(this).css({opacity: 0.5}, 200);
-
-			})
-
-		  $(".nav-item1").mouseenter(function(){
-		  	$(".colorband-one").css({height: 100px}, 100);
-		  	})
-		  $(".nav-item1").mouseleave(function(){
-		  	$(".colorband-one").animate({opacity: 0}, 500);
-		  	})
-
-		}
-
-});
-
-
-
-    </script>
-
--->
-<!--
-
-    <script type="text/javascript">
-      $(document).ready(function() {
-
-         $("#myblog").load('http://entirelynew.net/wwsf/blog/');
+  <script>
+  // Use $(window).load() on live site instead of document ready. This is for the purpose of running locally only
+    $(document).ready(function(){
+      $(".panorama").panorama_viewer({
+        repeat: true
       });
+    });
+    
+  </script>
+
+	<script> 
+
+      $( document ).ready(function() {
 
 
+      	//VIDEO
+
+          $( "#video-button" ).click(function( event ) {
+       
+              $( ".video-overlay" ).css({
+                  'visibility' : 'visible',
+                   'opacity' : '1',
+                   'pointer-events' : 'auto',
+                }),
+
+           $( ".info-text" ).css({
+                   'pointer-events' : 'auto',
+                });   
+
+          });
+
+          $( ".video-close" ).click(function( event ) {
+       
+              $( ".video-overlay" ).css({
 
 
+                'visibility' : 'hidden',
+                  'opacity' : '0',
+                   'pointer-events' : 'none',
+                }),
 
-    </script> -->
-<!--
+           $( ".info-text" ).css({
+                   'pointer-events' : 'none',
+                });     
 
-	<script type="text/javascript">
-	    $(document).ready(function(){
-	    $.ajaxSetup({cache:false});
-	    $("h2 a").click(function(){
-	        var post_id = $(this).attr("rel")
-	        $("#your_post_here").html("loading...");
-	        $("#your_post_here").load("http://<?php echo $_SERVER[HTTP_HOST]; ?>/triqui-ajax/",{id:post_id});
-	        return false;
-	    });
-	});
+
+          });
+
+          // 360
+
+
+          $( "#ts-button" ).click(function( event ) {
+       
+
+              $( ".ts-overlay" ).css({
+                  'visibility' : 'visible',
+                   'opacity' : '1',
+                   'pointer-events' : 'auto',
+                }),
+
+           $( ".info-text" ).css({
+                   'pointer-events' : 'auto',
+                });   
+
+          });
+
+          $( ".ts-close" ).click(function( event ) {
+       
+              $( ".ts-overlay" ).css({
+
+
+                'visibility' : 'hidden',
+                  'opacity' : '0',
+                   'pointer-events' : 'none',
+                }),
+
+           $( ".info-text" ).css({
+                   'pointer-events' : 'none',
+                });     
+
+
+          });
+
+
+          // Gallery
+
+
+          $( "#gallery-button" ).click(function( event ) {
+       
+
+              $( ".gallery-overlay" ).css({
+                  'visibility' : 'visible',
+                   'opacity' : '1',
+                   'pointer-events' : 'auto',
+                }),
+
+           $( ".info-text" ).css({
+                   'pointer-events' : 'auto',
+                });   
+
+          });
+
+          $( ".gallery-close" ).click(function( event ) {
+       
+              $( ".gallery-overlay" ).css({
+
+
+                'visibility' : 'hidden',
+                  'opacity' : '0',
+                   'pointer-events' : 'none',
+                }),
+
+           $( ".info-text" ).css({
+                   'pointer-events' : 'none',
+                });     
+
+
+          });
+
+          // Gallery image slider
+
+
+             
+      });
+            
 	</script>
--->
-
-		<script> 
-
-		$(document).ready(function(){
-		    $('#content').hover(function() {
-		        $("#content").addClass('transition');
-		    
-		    }, function() {oveClass('transition');
-		    });
-		});
-		        $("#content").rem
-
-			</script>
 
 
 
@@ -131,15 +179,80 @@
 
 
 
-  	<!-- overlay gallery --> 
+  	<!-- video overlay --> 
 
+    <div class="video-overlay">
 
-
-    <div class="g-overlay">
-
-    	             <div class="square_w_image" style="float: right;">
-              <img class="close" src="assets/icons/close_icon.png" style="width:100%; height:100%; z-index: 10; position: absolute;" />
+             <div class="square_w_image" style="float: right;">
+              <img class="video-close" src="assets/icons/close_icon.png" style="width:100%; height:100%; z-index: 10; position: absolute;" />
             </div>
+
+            <div style="position:absolute; width: 100%; text-align: center;">
+
+            <div style="margin-top: 14.28%; position:absolute; text-align: center; width:100%; padding-top: 30px; padding-bottom: 30px;">
+
+            <div style="width:100% height: 100%;">
+
+            <iframe src="http://player.vimeo.com/video/104755287?title=0&amp;byline=0&amp;portrait=0&amp;color=ff9933&amp;autoplay=0&amp;loop="  width="1000" height="562" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>Loading</iframe>
+            </div>
+
+            </div>
+          </div>
+
+
+      </div>
+
+    </div>
+
+
+
+
+
+  	<!-- ts overlay --> 
+
+    <div class="ts-overlay">
+
+             <div class="square_w_image" style="float: right;">
+              <img class="ts-close" src="assets/icons/close_icon.png" style="width:100%; height:100%; z-index: 10; position: absolute;" />
+            </div>
+
+
+
+            <div style="margin-top: 14.28%; position:absolute; text-align: center; width:100%; padding-top: 30px; padding-bottom: 30px;">
+
+
+
+               <div class="panorama">
+     
+                
+                  <img src="assets/panorama/panorama-one.jpg" style="height: 28.56%;"/>
+                
+                </div>
+
+
+            </div> 
+
+
+
+    </div>
+
+
+
+  	<!-- gallery overlay --> 
+  	  <div class="gallery-overlay">
+
+             <div class="square_w_image" style="float: right;">
+              <img class="gallery-close" src="assets/icons/close_icon.png" style="width:100%; height:100%; z-index: 10; position: absolute;" />
+            </div>
+
+      <div class="information">
+
+        Gallery content will be here.
+
+      </div>
+
+    </div>
+
 
 
 <!--
@@ -187,47 +300,47 @@
 
     <!-- header --> 
 
-
-  	<div class="row" style="wdith: 100%, padding-bottom: 14.28%;">
+    <div class="row" style="wdith: 100%, padding-bottom: 14.28%;">
       <div class="square_w_image">
-   		<a href="index.html">
+      <a href="index.html">
 
         <img src="assets/still/sf01.png" style="width:100%; height:100%; position: absolute;" /></a>
       </div>
-  		<div class="mid" style="padding-bottom: 14.28%;">
+      <div class="mid" style="padding-bottom: 14.28%;">
 
-  			<div class="colorband-five-a"></div>
-  			<h2>Next Station</h2>
+        <div class="colorband-five-a"></div>
+        <h2>Next Station</h2>
 
 
-  		</div>
-  		 <div class="mid" style="padding-bottom: 14.28%;">
-  		 	<div class="colorband-five-a"></div>
-  		 	<div style="padding-left: 22px; padding-top:18px; position:absolute;">
-  		 	<h7>Location</h7>
-  		 	          <div style="height:0.1px; width:100%; clear:both;"></div>
-
-  		 	<h8>Tel Aviv's Central Bus Station (CBS), Tel Aviv, Israel</h8>
-  		 	          <div style="height:0.1px; width:100%; clear:both;"></div>
-
-  		 	<h7>Participant</h7>
-  		 	          <div style="height:0.1px; width:100%; clear:both;"></div>
-
-  		 	<h8>Onya Collective </h8>
-  		 	          <div style="height:0.1px; width:100%; clear:both;"></div>
-
-  		 </div>
-  		 	
-
-  		 </div>
-
-	<div class="square_w_image">        
-	<img src="assets/still/sf00.png" style="width:100%; height:100%; position: absolute;" />
       </div>
-	<div class="square_w_image">        
-	<img src="http://lorempixel.com/g/300/300/sports" style="width:100%; height:100%; position: absolute; z-index: 1;" />
-		<img id="video-button" src="assets/icons/video.png" style="width:100%; height:100%; position: absolute; z-index: 2;" />
+       <div class="mid" style="padding-bottom: 14.28%;">
+        <div class="colorband-five-a"></div>
+        <div style="padding-left: 22px; padding-top:18px; position:absolute;">
+        <h7>Location</h7>
+                  <div style="height:0.1px; width:100%; clear:both;"></div>
+
+        <h8>Tel Aviv's Central Bus Station (CBS), Tel Aviv, Israel</h8>
+                  <div style="height:0.1px; width:100%; clear:both;"></div>
+
+        <h7>Participant</h7>
+                  <div style="height:0.1px; width:100%; clear:both;"></div>
+
+        <h8>Onya Collective </h8>
+                  <div style="height:0.1px; width:100%; clear:both;"></div>
+
+       </div>
+        
+
+       </div>
+
+  <div class="square_w_image">        
+  <img src="assets/still/sf00.png" style="width:100%; height:100%; position: absolute;" />
       </div>
+  <div class="square_w_image">        
+  <img src="http://lorempixel.com/g/300/300/sports" style="width:100%; height:100%; position: absolute; z-index: 1;" />
+    <img id="video-button" src="assets/icons/video.png" style="width:100%; height:100%; position: absolute; z-index: 2;" />
+      </div>
+
 
 
   	<!-- main --> 
@@ -236,7 +349,6 @@
   	<div style="width: 100%; height: 86.9%;">
 
   	<div class="left-nav">
-
 
 		<div class="nav-item1" style="width: 100%; height: auto;">
 	
@@ -307,7 +419,7 @@
 			<div class="n-item">
 
 			<div class="colorband-six"></div>
-			<h3>HMONG TOWN</br>MARKETPLACE</h3>
+			<h3>STOREFRONT</br>MARKETPLACE</h3>
 		</div>
 	</a>
 		</div>
@@ -330,7 +442,7 @@
 			<div class="n-item">
 
 			<div class="colorband-eight"></div>
-			<h3>CONTAINER</br>ART</br>RESIDENCY</h3>
+			<h3>CONTAINER</br>ARTIST</br>RESIDENCY</h3>
 		</div>
 		</a>
 		</div>
@@ -341,7 +453,7 @@
 			<div class="n-item">
 
 			<div class="colorband-nine"></div>
-			<h3>HOST:</br>NATURAL</br>HISTORIES</h3>
+			<h3>HOST:</br>NATURAL HISTORIES FOR LA</h3>
 		</div>
 	</a>
 		</div>
@@ -358,11 +470,11 @@
 		</div>
 
 		<div class="nav-item11">
-				<a href="project11.html">
+				<a href="http://storefrontnews.org" target="new-window">
 		
 			<div class="n-item">
 			<div class="colorband-eleven"></div>
-			<h3>STOREFRONT FOR ART AND ARCHITECTURE</h3>
+			<h3 id="bw">STOREFRONT FOR ART AND ARCHITECTURE</h3>
 		</div>
 	</a>
 		</div>
@@ -386,7 +498,7 @@
 		<div>
 
 
-		<iframe src ="http://entirelynew.net/wwsf/blog" width="100%" height="2400px">
+		<iframe style="padding-top: 10px;" src ="http://entirelynew.net/wwsf/blog" width="100%" height="2400px">
 		  <p>Your browser does not support iframes.</p>
 		</iframe>
 
@@ -401,17 +513,20 @@
 	<div class="right-nav" style="overflow: scroll;">
 		<div class="n-item">
 
-				<div class="nav-item-right" style="backgroud-color: black; padding-bottom: 100%; overflow: scroll;">
+				<div class="nav-item-right" style="backgroud-color: black; padding-bottom: 100%; bottom: 15px; overflow: scroll;">
 				
-						<div style="color: white;">
 
-							<h5 style="font-size: 1.2em; font-weight: 400;"><b>About the Project</b><p>
+						<div style="position: absolute; top:15px; left:15px; right: 15px; bottom: 15px; width: 94%; clear:both;">
+
+							<h5 style="color: white; font-size: 1.2em; font-weight: 400; margin-bottom: 25px;"><b>About the Project</b><p>
 
 								          <div style="height:0.5em; width:100%; clear:both;"></div>
+
+
 Tel Aviv's Central Bus Station (CBS), one of the world's largest bus stations, occupies an area of over 10 acres and 7 floors. The mall contains 1600 stores, public transportation platforms, offices, an atomic bomb shelter, cultural institutions, and community organizations. The CBS area is also a concentration of social and racial tensions generated by structural decay and state neglect, accelerated by migration waves from Asia and Africa. <div style="height:0.8em; width:100%; clear:both;"></div>
 
 Next Station questions the building's future with a series of interventions—selected from an open call for proposals—occupying the depths of the CBS. Seeking to present innovative ways to connect cityscape and nature, Urban Farming, Guerilla Gardening and Micro Gardening projects installed in the CBS reflect on the ecologies of the urban environment and how they can help to resolve conflicts in such a convulsive city like Tel Aviv. 
-
+</h5>
 
 						</div> 
 
@@ -420,7 +535,7 @@ Next Station questions the building's future with a series of interventions—se
 				<div class="nav-item-right">
 
 					<img src="http://lorempixel.com/g/600/300/sports" style="width:100%; height: 100%; z-index=1;">
-					<img id="360-button" src="assets/icons/360_icon.png" style="position: absolute; top: 0; left: 0; width:100%; height: 100%; z-index=2;">
+					<img id="ts-button" src="assets/icons/360_icon.png" style="position: absolute; top: 0; left: 0; width:100%; height: 100%; z-index=2;">
 
 				</div>
 
@@ -430,14 +545,14 @@ Next Station questions the building's future with a series of interventions—se
 		-->
 
 				<div style="">
-				<iframe width="100%" height="400px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/42389480&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+				<iframe width="100%" height="400px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/50359045&amp;color=ED1F24&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 		        </div>   
 
 		        <div class="nav-item-right">
 
 					<img src="assets/slides/slide5.png" style="width:100%; height: 100%;" />
 					<div style="width: 100%; font-size: 2em; position: absolute; text-align: center; bottom: 55%;">
-					<h1>Gallery</h1>
+					<h1 id="gallery-button">Gallery</h1>
 				</div>
 				</div>    
 
@@ -447,4 +562,3 @@ Next Station questions the building's future with a series of interventions—se
 
 
   </body>
-	
