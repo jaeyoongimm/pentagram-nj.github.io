@@ -108,13 +108,13 @@ $(document).ready(function(){
 
 	$(".nav-item11").mouseenter(function(){
 		 $(".colorband-eleven").css("height", "100%");
-		 $(this).css("color","white");
+		 $( "#bw" ).css("color","white");
 
 	})
 
 	$(".nav-item11").mouseleave(function(){
 		 $(".colorband-eleven").css("height", "13.888888889%");
-		 $(this).css("color", "black");
+		 $( "#bw" ).css("color", "black");
 	})
 
 

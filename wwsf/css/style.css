@@ -53,10 +53,10 @@ h5 {
 }
 
 h3 {
-  padding-top: 20px;
+  padding-top: 15px;
   padding-left: 10px;
-  font-size: 1.25em;
-  font-weight: 700;
+  font-size: 1.3em;
+  font-weight: bold 900;
 }
 
 h4 {
@@ -84,7 +84,6 @@ h8 {
 
 
 
-
 audio {
   width: 100%;
   height: 100%;
@@ -100,7 +99,7 @@ a:hover {
 }
 
 
-#gallery-button, #video-button, #audio-button, #ts-button {
+.video-close, .gallery-close, .ts-close, #gallery-button, #video-button, #audio-button, #ts-button {
     cursor: pointer;
 }
 
