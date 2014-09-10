@@ -42,10 +42,11 @@ h2 {
 }
 
 h5 {
+  /*
   padding-top: 25px;
   padding-left: 25px;
   padding-right: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 25px;*/
   font-size: 0.8em;
   position: absolute;
   overflow: scroll;
@@ -81,8 +82,20 @@ h8 {
     line-height: 0.3em;
 }
 
+#small{
+  font-size: 0.8em;
+  line-height: 0.25em;
+  margin-top: -1px;
+}
 
+#small-set{
+  font-size: 0.8em;
 
+}
+#smaller-set{
+  font-size: 0.7em;
+
+}
 
 audio {
   width: 100%;
@@ -1358,10 +1371,10 @@ iframe {
 
 
 .nav-item-right {
-  font-size: 0.5em;
-  color: white;
-  position: relative;
-  display: inline-block;
+    font-size: 0.5em;
+    color: white;
+    position: relative;
+    display: inline-block;
     box-sizing:border-box;
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
@@ -1372,7 +1385,7 @@ iframe {
     float: left;
     margin: auto 0;
     padding: 0;
-    margin-left: -1px;
+    //margin-left: -1px;
     width: 100%;
     background-color: rgba(0,0,0,1);
     z-index: 1;
