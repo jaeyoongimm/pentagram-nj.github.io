@@ -34,7 +34,10 @@ main {
 
 }
 
+h1 {
+    font-size: 1.3em;
 
+}
 
 h2 {
   padding-top: 25px;
@@ -287,7 +290,7 @@ iframe {
   margin-top: 14.45%;
   margin-left: 14.33%;
   width: 71.4%;
-  padding-bottom: 47.2%;
+  padding-bottom: 42.3%;
   max-height: 73%;
   background-color: white;
 
