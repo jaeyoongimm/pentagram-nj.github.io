@@ -315,14 +315,14 @@
       </div>
 
 
-      <div class="two-squares" style="margin: auto 0;">
+      <div class="two-squares" style="margin: auto 0; z-index: 10;">
 
 
 
         <div class="wide-container">
 
               <div id="slides">
-                <div class="slides-container">
+                <div class="slides-container" style="z-index: -90; pointer-events: none;">
 
                                     
 
@@ -543,7 +543,7 @@
 
       <div class="square"></div>
 
-      <div class="square_last_col" style="pointer-events: none;">       
+      <div class="square_w_image" style="pointer-events: none; background-color: black;">       
         <img class="calendar" src="assets/still/calendar.jpg" style="width:100%; height:100%; z-index: 10; position: absolute;" /></div>
 
 
@@ -580,7 +580,7 @@
 
 
 
-    <div width=100% style="margin: 0;">
+    <div style="width: 100%; margin: 0;">
       <div class="video_home">
 <!--
       <div id="player"></div>
@@ -596,18 +596,18 @@
 
 
 -->
-
-          <div class="embed-container">
-
-            <div class="colorband-four" style="z-index: 90; height: 10%;">
+          <div class="embed-container" style="z-index: 0; width: 100%;">
+<!--
+            <div class="colorband-four" style="z-index: ; height: 10%;">
 
               <h6 style="padding-top: 4px;">New York City</h6>
 
 
             </div>
+-->
 
-            <iframe src="http://player.vimeo.com/video/104755287?title=0&amp;byline=0&amp;portrait=0&amp;color=ff9933&amp;autoplay=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="margin-top:-1px; padding-top:0px; bottom: 0px;">Loading</iframe>
-            </div>
+            <iframe src="http://player.vimeo.com/video/104755287?title=0&amp;byline=0&amp;portrait=0&amp;color=ff9933&amp;autoplay=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="margin-top:-1px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
+          </div>
 
 
       </div>
@@ -623,7 +623,6 @@
 
             </div>
         </div>
-
 
 
 
@@ -653,7 +652,10 @@
 </div>
 
   <div class="right-col">
-           <div class="square_z_half">
+
+
+    <div style="width: 100%; ">
+           <div class="square_z_half_one" style="background-color: black;">
 
 
 
@@ -700,8 +702,12 @@
 
             </div>
 
-            <div class="square_z_half"></div>
-            <div class="square_z">              
+            <div class="square_z_half_two"></div>
+
+
+
+        </div>
+            <div class="square_z" style="width: 100%;">              
 
               <img src="assets/gif/w4large.gif" style="width:100%; height:100%; z-index: 10; position: absolute;" />
 
