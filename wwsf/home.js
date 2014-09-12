@@ -1,13 +1,3 @@
-
-document.addEventListener('DOMContentLoaded', function () {
-    var element = document.createElement('script');
-    element.src =
-        'http://maps.google.com/maps/api/js?sensor=true&amp;callback=Initialize';
-    element.type = 'text/javascript';
-    var scripts = document.getElementsByTagName('script')[0];
-    scripts.parentNode.insertBefore(element, scripts);
-}, false);
-
 var map;
 var brooklyn = new google.maps.LatLng(16.467694, -42.932149);
 
