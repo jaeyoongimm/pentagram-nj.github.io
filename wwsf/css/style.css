@@ -207,6 +207,7 @@ iframe {
 
 #audio_on {
     cursor: pointer;
+    z-index: -9999;
 
 }
 
@@ -231,7 +232,7 @@ iframe {
 
   opacity: 0;
   pointer-events: none;
-  z-index: 900;
+  z-index: 999;
   position: absolute;
   width: 100%;
   padding-bottom: 86%;
