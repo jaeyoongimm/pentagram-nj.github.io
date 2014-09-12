@@ -55,6 +55,8 @@ h5 {
   font-size: 0.8em;
   position: absolute;
   overflow: scroll;
+  //padding-bottom: 20px;
+    padding-right: 35px;
 
 }
 
@@ -894,7 +896,7 @@ iframe {
     float: left;
     margin: auto 0;
     //margin-left: -1px;
-     width: 57.12%;
+     width: 57.14%;
      height: 100%;
     //background-color: rgba(120,120,120,0.3);
     z-index: 1;
@@ -1130,7 +1132,7 @@ iframe {
     margin: auto 0;
     padding: 0;
     //margin-left: -1px;
-    width: 28.60%;
+    width: 28.58%;
     border: 1px solid black;
     bottom: 0;
     padding-bottom: 86.9%;
@@ -1430,8 +1432,12 @@ iframe {
     -webkit-box-sizing:border-box;
     top: 0;
     left: 0;
-    border: 1px solid black;
+    right: 15px;
+    border-left: 0px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 
+    padding-right: 15px;
     float: left;
     margin: auto 0;
     padding: 0;
