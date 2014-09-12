@@ -18,21 +18,15 @@
 
     <link rel="stylesheet" type="text/css" href="css/stylemin.css">
   
-<!--
-    <link type="text/css" rel="stylesheet" href="css/lightSlider.css" />-->
+
 
     <link rel="stylesheet" href="css/superslides.css">
-
-
-    
-    <!-- Javascript -->
-
-
-<!--
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
   <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
     <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script> 
-    
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
+
     <style>
 
 
@@ -123,81 +117,6 @@
 
 
 <div style="margin: auto 0;">
-    <script>
-
-
-
-      $( document ).ready(function() {
-
-          $( ".open" ).click(function( event ) {
-       
-
-              $( ".overlay" ).css({
-                  'visibility' : 'visible',
-                   'opacity' : '1',
-                   'pointer-events' : 'auto',
-                }),
-
-           $( ".info-text" ).css({
-                   'pointer-events' : 'auto',
-                });   
-
-          });
-
-          $( ".close" ).click(function( event ) {
-       
-              $( ".overlay" ).css({
-
-
-                'visibility' : 'hidden',
-                  'opacity' : '0',
-                   'pointer-events' : 'none',
-                }),
-
-           $( ".info-text" ).css({
-                   'pointer-events' : 'none',
-                });     
-
-
-          });
-
-//audio play button
-
-          $( "#audio_on" ).click(function( event ) {
-       
-          });
-
-//opens overlay for calendar
-
-          $( ".calendar" ).click(function( event ) {
-       
-
-              $( ".calendaroverlay" ).css({
-                  'opacity' : '1',
-                   'visibility' : 'visible',
-                   'pointer-events' : 'auto'
-                });
-          });
-
-
-          $( ".calclose" ).click(function( event ) {
-       
-
-              $( ".calendaroverlay" ).css({
-                   'opacity' : '0',
-                   'visibility' : 'hidden',
-                   'pointer-events' : 'none'
-                })  
-
-
-          });
-             
-      });
-            
-
-    </script>
-
-
 
 
 
@@ -319,7 +238,7 @@
                   <div class="colorband-one" style="height: 20%; z-index:90;">
                     <h4 id="slider-title">Toronto</h4>
                   </div>
-                  <img src="assets/slides/slide1.png" alt="Cinelli">
+                  <img class="lazy" src="assets/slides/slide1.png" alt="Cinelli">
                 </div>
 
 
@@ -328,7 +247,7 @@
                     <h4 id="slider-title">Santo Domingo</h4>
                   </div>
                   <a href="project2.html">
-                  <img src="assets/slides/slide2.png" alt="Cinelli"></a>
+                  <img class="lazy" src="assets/slides/slide2.png" alt="Cinelli"></a>
                 </a>
                 </div>
 
@@ -339,7 +258,7 @@
                     <h4 id="slider-title">Los Angeles</h4>
                   </div>
                   <a href="project3.html">
-                  <img src="assets/slides/slide3.png" alt="Cinelli"></a>
+                  <img class="lazy" src="assets/slides/slide3.png" alt="Cinelli"></a>
                 </div>
 
 
@@ -349,7 +268,7 @@
                     <h4 id="slider-title">Athens</h4>
                   </div>
                   <a href="project4.html">
-                  <img src="assets/slides/slide4.png" alt="Cinelli"></a>
+                  <img class="lazy" src="assets/slides/slide4.png" alt="Cinelli"></a>
                 </div>
 
 
@@ -358,7 +277,7 @@
                     <h4 id="slider-title">Tel Aviv</h4>
                   </div>
                   <a href="project5.html">
-                  <img src="assets/slides/slide5.png" alt="Cinelli"></a>
+                  <img class="lazy" src="assets/slides/slide5.png" alt="Cinelli"></a>
                 </div>
 
 
@@ -368,7 +287,7 @@
                     <h4 id="slider-title">Minneapolis</h4>
                   </div>
                   <a href="project6.html">
-                  <img src="assets/slides/slide6.png" alt="Cinelli"></a>
+                  <img class="lazy" src="assets/slides/slide6.png" alt="Cinelli"></a>
                 </div>
 
 
@@ -378,7 +297,7 @@
                     <h4 id="slider-title">Itinerant</h4>
                   </div>
                   <a href="project4.html">
-                  <img src="assets/slides/slide7.png" alt="Cinelli"></a>
+                  <img class="lazy" src="assets/slides/slide7.png" alt="Cinelli"></a>
                 </div>
 
 
@@ -388,7 +307,7 @@
                     <h4 id="slider-title">Itinerant</h4>
                   </div>
                   <a href="project5.html">
-                  <img src="assets/slides/slide8.png" alt="Cinelli"></a>
+                  <img class="lazy" src="assets/slides/slide8.png" alt="Cinelli"></a>
                 </div>
 
                  <div class="slide-nine">
@@ -396,7 +315,7 @@
                     <h4 id="slider-title">Los Angeles</h4>
                   </div>
                   <a href="project1.html">
-                  <img src="assets/slides/slide9.png" alt="Cinelli"></a>
+                  <img class="lazy" src="assets/slides/slide9.png" alt="Cinelli"></a>
                 </div>
 
                  <div class="slide-ten">
@@ -404,7 +323,7 @@
                     <h4 id="slider-title">Montreal</h4>
                   </div>
                   <a href="project1.html">
-                  <img src="assets/slides/slide10.png" alt="Cinelli"></a>
+                  <img class="lazy" src="assets/slides/slide10.png" alt="Cinelli"></a>
                 </div>
 
                 </div>
@@ -714,6 +633,11 @@
 </div>
   </body>
 
-      <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-    <script src="home_min.js"></script>
+
+            <script src="js/lazy_min.js"></script> 
+
+        <script src="home_min.js"></script>
+
+
+        
 </html>

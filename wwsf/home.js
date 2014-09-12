@@ -379,5 +379,75 @@ google.maps.event.addListener(marker_six_second, 'click', function() {
 
 }
 
-  
+
+      $( document ).ready(function() {
+
+          $( ".open" ).click(function( event ) {
+       
+
+              $( ".overlay" ).css({
+                  'visibility' : 'visible',
+                   'opacity' : '1',
+                   'pointer-events' : 'auto',
+                }),
+
+           $( ".info-text" ).css({
+                   'pointer-events' : 'auto',
+                });   
+
+          });
+
+          $( ".close" ).click(function( event ) {
+       
+              $( ".overlay" ).css({
+
+
+                'visibility' : 'hidden',
+                  'opacity' : '0',
+                   'pointer-events' : 'none',
+                }),
+
+           $( ".info-text" ).css({
+                   'pointer-events' : 'none',
+                });     
+
+
+          });
+
+//audio play button
+
+          $( "#audio_on" ).click(function( event ) {
+       
+          });
+
+//opens overlay for calendar
+
+          $( ".calendar" ).click(function( event ) {
+       
+
+              $( ".calendaroverlay" ).css({
+                  'opacity' : '1',
+                   'visibility' : 'visible',
+                   'pointer-events' : 'auto'
+                });
+          });
+
+
+          $( ".calclose" ).click(function( event ) {
+       
+
+              $( ".calendaroverlay" ).css({
+                   'opacity' : '0',
+                   'visibility' : 'hidden',
+                   'pointer-events' : 'none'
+                })  
+
+
+          });
+             
+      });
+
+
+
+
 
