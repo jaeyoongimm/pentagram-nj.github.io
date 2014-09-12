@@ -8,6 +8,7 @@ var brooklyn = new google.maps.LatLng(16.467694, -42.932149);
 
 var MY_MAPTYPE_ID = 'custom_style';
 
+google.maps.event.addDomListener(window, 'load', initialize);
 
 
 function initialize() {
@@ -381,16 +382,5 @@ google.maps.event.addListener(marker_six_second, 'click', function() {
 
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
   
-
-//JQeury
-
-
-    $(function () {
-
-        var height = $('.square').width; 
-
-        $(".square").css("height", height);
-    });
 
