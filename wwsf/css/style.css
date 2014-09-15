@@ -13,7 +13,7 @@ html{
 }
 
 body{ 
-  bottom: 10px;
+  //bottom: 10px;
   max-width: 1200px;
   //margin: 0 auto;
   //background-color: white;
@@ -156,8 +156,9 @@ iframe {
   position: absolute;
   width: 100%;
     max-width: 1200px;
+padding-bottom: 59.3%;
+      max-height: 1200px;
 
-  padding-bottom: 86%;
   background-color: rgba(0,0,0,0.8);
 
 }
@@ -174,7 +175,9 @@ iframe {
   position: absolute;
   width: 100%;
   max-width: 1200px;
-  padding-bottom: 86%;
+padding-bottom: 59.3%;
+      max-height: 1200px;
+
   background-color: rgba(0,0,0,0.8);
 
 }
@@ -190,8 +193,8 @@ iframe {
   position: absolute;
   width: 100%;
     max-width: 1200px;
-
-  padding-bottom: 86%;
+      max-height: 1200px;
+  padding-bottom: 29.5%;
   background-color: rgba(0,0,0,0.8);
 
 }
@@ -235,8 +238,12 @@ iframe {
   z-index: 999;
   position: absolute;
   width: 100%;
-  padding-bottom: 86%;
+  margin-top: 0;
+  height: 1371.43px;
+  padding-bottom: 5%;
   background-color: rgba(0,0,0,0.8);
+  max-height: 1371.43px;
+  overflow: hidden;
 
 }
 
@@ -973,7 +980,8 @@ iframe {
     //background-color: rgba(120,120,120,0.3);
     z-index: 1;
     height: 100%;
-
+    max-height: 1045px;
+    overflow: hidden;
 
     //border: 1px solid black;
     font-size: 1.5em;
@@ -998,6 +1006,8 @@ iframe {
     z-index: 1;
     font-size: 1.5em;
     font-weight: 700;
+        max-height: 514.285714286px;
+
 }
 
 .col_in_col {
@@ -1037,13 +1047,12 @@ iframe {
     //left: 0;
     //margin-left: -1px;
     width: 57.12%;
-    padding-bottom: 57.12%;
-
+    padding-bottom: 0;
     max-height: 42.84%;
     height: auto;
     //background-color: rgba(120,120,120,0.8);
     z-index: 1;
-    max-height: 42.84%;
+    //max-height: 42.84%;
     margin-right: -1px;
     font-size: 1.5em;
     font-weight: 700;
@@ -1069,6 +1078,7 @@ iframe {
     max-height: 42.84%;
     font-size: 1.5em;
     font-weight: 700;
+    max-height: 514.285714286px;
 
 }
 
@@ -1167,7 +1177,7 @@ iframe {
 
 
 .nav-item1 {
-
+max-height: 93.5454545455px;
     overflow: hidden;
     font-size: 0.5em;
     position: relative;
@@ -1189,6 +1199,8 @@ iframe {
 }
 
 .nav-item2 {
+max-height: 93.5454545455px;
+
   font-size: 0.5em;
   position: relative;
   display: inline-block;
@@ -1210,6 +1222,8 @@ iframe {
 }
 
 .nav-item3 {
+  max-height: 93.5454545455px;
+
   font-size: 0.5em;
   position: relative;
   display: inline-block;
@@ -1230,6 +1244,8 @@ iframe {
 
 }
 .nav-item4 {
+  max-height: 93.5454545455px;
+
   font-size: 0.5em;
   position: relative;
   display: inline-block;
@@ -1252,6 +1268,8 @@ iframe {
 
 
 .nav-item7 {
+  max-height: 93.5454545455px;
+
   font-size: 0.5em;
   position: relative;
   display: inline-block;
@@ -1274,6 +1292,8 @@ iframe {
 
 
 .nav-item6 {
+  max-height: 93.5454545455px;
+
   font-size: 0.5em;
   position: relative;
   display: inline-block;
@@ -1295,6 +1315,8 @@ iframe {
 
 
 .nav-item5 {
+  max-height: 93.5454545455px;
+
   font-size: 0.5em;
   position: relative;
   display: inline-block;
@@ -1316,6 +1338,8 @@ iframe {
 
 
 .nav-item8 {
+  max-height: 93.5454545455px;
+
   font-size: 0.5em;
   position: relative;
   display: inline-block;
@@ -1337,6 +1361,8 @@ iframe {
 
 
 .nav-item9 {
+  max-height: 93.5454545455px;
+
   font-size: 0.5em;
   position: relative;
   display: inline-block;
@@ -1358,6 +1384,8 @@ iframe {
 
 
 .nav-item10 {
+  max-height: 93.5454545455px;
+
   font-size: 0.5em;
   position: relative;
   display: inline-block;
@@ -1378,6 +1406,8 @@ iframe {
 }
 
 .nav-item11 {
+  max-height: 93.5454545455px;
+
   font-size: 0.5em;
   position: relative;
   display: inline-block;
