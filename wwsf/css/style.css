@@ -72,6 +72,14 @@ h8 {
     font-weight: 400;
 }
 
+#audio-button {
+    cursor: pointer;
+}
+
+#ts-button {
+    cursor: pointer;
+}
+
 
 audio {
   width: 100%;
