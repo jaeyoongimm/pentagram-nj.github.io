@@ -156,8 +156,9 @@ iframe {
   position: absolute;
   width: 100%;
     max-width: 1200px;
-padding-bottom: 59.3%;
-      max-height: 1200px;
+height: 1220px;
+      max-height: 1220px;
+      overflow:hidden;
 
   background-color: rgba(0,0,0,0.8);
 
@@ -175,8 +176,8 @@ padding-bottom: 59.3%;
   position: absolute;
   width: 100%;
   max-width: 1200px;
-padding-bottom: 59.3%;
-      max-height: 1200px;
+height: 1220px;
+      max-height: 1220px;
 
   background-color: rgba(0,0,0,0.8);
 
@@ -193,8 +194,8 @@ padding-bottom: 59.3%;
   position: absolute;
   width: 100%;
     max-width: 1200px;
-      max-height: 1200px;
-  padding-bottom: 29.5%;
+height: 1220px;
+      max-height: 1220px;
   background-color: rgba(0,0,0,0.8);
 
 }
