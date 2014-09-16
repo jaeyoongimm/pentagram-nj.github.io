@@ -161,7 +161,17 @@ html { max-height: 1200px;}
           });
 
           // Gallery image slider
+          $( ".arrow-right" ).click(function( event ) {
+       
+              $(".imageimage").attr("src", "http://lorempixel.com/800/600/sports");
 
+          });
+
+          $( ".arrow-left" ).click(function( event ) {
+       
+              $(".imageimage").attr("src", "http://lorempixel.com/800/600/fashion");
+
+          });
 
              
       });
@@ -253,7 +263,10 @@ html { max-height: 1200px;}
 
             <div style="width:100%; text-align:center; z-index: 999; height: 1200px;">
 
-            <img src="http://lorempixel.com/g/600/800/sports/" style="margin: 0 auto; top:20%; position: absolute;" />
+<!-- images -->
+            <img class="imageimage" src="http://lorempixel.com/g/600/800/sports/" style="top:20%; position: relative;" />
+
+
 
           </div>
 

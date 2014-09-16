@@ -196,11 +196,13 @@ height: 1220px;
     max-width: 1200px;
 height: 1220px;
       max-height: 1220px;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.85);
 
 }
 
-
+.arrow-right, .arrow-left {
+  cursor: pointer;
+}
 
 
 
@@ -295,7 +297,10 @@ height: 1220px;
   z-index: 999;
   position: absolute;
   width: 100%;
-  padding-bottom: 41.58%;
+  //padding-bottom: 41.58%;
+    height: 1440px;
+  max-height: 1440px;
+
   background-color: rgba(0,0,0,0.8);
 
 }
@@ -815,7 +820,7 @@ height: 1220px;
 }
 
 #slider-title {
-    font-size: 1.2em;
+    font-size: 0.98em;
     padding-top: 3px;
 }
 
