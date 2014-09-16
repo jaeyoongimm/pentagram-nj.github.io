@@ -47,11 +47,7 @@ h2 {
 }
 
 h5 {
-  /*
-  padding-top: 25px;
-  padding-left: 25px;
-  padding-right: 25px;
-  margin-bottom: 25px;*/
+
   font-size: 1.05em;
   position: absolute;
   overflow: scroll;
@@ -193,11 +189,10 @@ height: 1220px;
   z-index: 900;
   position: absolute;
   width: 100%;
-    max-width: 1200px;
-height: 1220px;
-      max-height: 1220px;
+  max-width: 1200px;
+  height: 1220px;
+  max-height: 1220px;
   background-color: rgba(0,0,0,0.85);
-
 }
 
 .arrow-right, .arrow-left {
@@ -539,7 +534,7 @@ height: 1220px;
 }
 
 .square_z {
-    pointer-events: none;
+    pointer-events: auto;
     z-index: 1;
     position: relative;
     display: inline-block;
@@ -1746,7 +1741,6 @@ max-height: 93.5454545455px;
 
 @media screen and (max-width: 480px) {
 
-  /* disable webkit text size adjust (for iPhone) */
   html {
     -webkit-text-size-adjust: none;
   }

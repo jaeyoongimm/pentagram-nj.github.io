@@ -1,16 +1,82 @@
-
 <html>
 <head>
+
+	    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+        <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script> 
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>        
+
+
+        <script src="//f.vimeocdn.com/js/froogaloop2.min.js"></script>
+        <script src="/js/jquery.flexslider.js"></script>
+
+
+
+        <script>
+
+			$(window).load(function() {
+			 
+			    var vimeoPlayers = jQuery('.flexslider').find('iframe'), player;
+			 
+			    for (var i = 0, length = vimeoPlayers.length; i < length; i++) {
+			            player = vimeoPlayers[i];
+			            $f(player).addEvent('ready', ready);
+			    }
+			 
+			    function addEvent(element, eventName, callback) {
+			        if (element.addEventListener) {
+			            element.addEventListener(eventName, callback, false)
+			        } else {
+			            element.attachEvent(eventName, callback, false);
+			        }
+			    }
+			 
+			    function ready(player_id) {
+			        var froogaloop = $f(player_id);
+			        froogaloop.addEvent('play', function(data) {
+						$('.flexslider').flexslider("pause");
+			        });
+			        froogaloop.addEvent('pause', function(data) {
+						$('.flexslider').flexslider("play");
+			        });
+			    }
+			 
+			$(".flexslider")
+			    .fitVids()
+			    .flexslider({
+			        animation: "slide",
+			        animationLoop: false,
+			        smoothHeight: true,
+			        useCSS: false,
+			        before: function(slider){
+			            if (slider.slides.eq(slider.currentSlide).find('iframe').length !== 0)
+			                  $f( slider.slides.eq(slider.currentSlide).find('iframe').attr('id') ).api('pause');
+			        }
+			    });
+			 
+			});
+        </script>
+
 </head>
+
 <body>
+			<!-- Place somewhere in the <body> of your page -->
+			<div class="flexslider">
+			  <ul class="slides">
+			    <li>
+			      <iframe id="player_1" src="http://player.vimeo.com/video/39683393?api=1&player_id=player_1" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+			    </li>
+			    <li>
+			        <iframe id="player_2" src="http://player.vimeo.com/video/27243869?api=1&player_id=player_2" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+			    </li>
+			    <li>
+			        <iframe id="player_3" src="http://player.vimeo.com/video/27244727?api=1&player_id=player_3" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+			    </li>
+			    <li>
+			        <iframe id="player_4" src="http://player.vimeo.com/video/27246366?api=1&player_id=player_4" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+			    </li>
+			<ul>
+			</div>
 
 
-	
-	<iframe src="//player.vimeo.com/video/104755287?title=0&amp;byline=0&amp;color=faa63e" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-
-
-
-
-</body>
-</html>
+        </body>
+        </html>
