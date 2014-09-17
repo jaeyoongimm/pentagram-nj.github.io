@@ -331,6 +331,8 @@ height: 1220px;
   pointer-events: none;
   z-index: 999;
   margin-top: 2%;
+    margin-bottom: 2%;
+
   padding: 0px 0px 10px 3%;
   position: absolute;
   height: inherit;
