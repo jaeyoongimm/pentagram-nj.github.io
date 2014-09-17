@@ -508,6 +508,13 @@ height: 1220px;
     top:0;
 }
 
+/* vimeo stack */
+
+#video-two, #video-three, #video-four, #video-five, #video-six, #video-seven, #video-eight, #video-nine, #video-ten {
+
+  visibility: hidden;
+  display: none;
+}
 
 
 
