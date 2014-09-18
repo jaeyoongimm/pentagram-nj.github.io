@@ -526,7 +526,11 @@
           
                 
                 player.addEvent('ready', function() {
-                  player.addEvent('finish', playNextVideo);
+                  console.log("player ready");
+                  player.addEvent('finish', function(){
+                    console.log("player finished");
+                    playNextVideo();
+                  });
                 });
                 
                 currentVideoIndex = currentVideoIndex + 1;
