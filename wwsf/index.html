@@ -480,11 +480,13 @@
         <script src="home_min.js"></script>
         <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
 
-<!--superslider -->
+
 
         <script src="js/jquery.superslides_min.js" type="text/javascript" charset="utf-8"></script>
 
         <script>
+        
+          <!--superslider -->
           $(function() {
             $('#slides').superslides({
               hashchange: true,
@@ -502,41 +504,42 @@
               console.log('Started')
             });
           });
+          
+          <!--superslider -->
+
+          <!--vimeo code -->
+            $(function() {
+              console.log("vimeo function is running.");
+              var currentVideoIndex = 0;
+              var iframe, player;
+              var playNextVideo = function() {
+                console.log("playNextVideo function is running.");
+                console.log("currentVideoIndex:", currentVideoIndex);
+          
+                var currentVideoId = "#video-" + currentVideoIndex;
+                iframe = $(currentVideoId)[0];
+                player = $f(iframe);
+                
+                console.log("currentVideoId:", currentVideoId);
+                console.log("iframe:", iframe);
+                console.log("player:", player);
+          
+                
+                player.addEvent('ready', function() {
+                  player.addEvent('finish', playNextVideo);
+                });
+                
+                currentVideoIndex = currentVideoIndex + 1;
+                
+                console.log("currentVideoIndex:", currentVideoIndex);
+          
+              };
+          
+              playNextVideo();
+          });
+          
+          <!--vimeo code -->
         </script>
 
-<!--superslider -->
-
-<!--vimeo code -->
-  $(function() {
-    console.log("vimeo function is running.");
-    var currentVideoIndex = 0;
-    var iframe, player;
-    var playNextVideo = function() {
-      console.log("playNextVideo function is running.");
-      console.log("currentVideoIndex:", currentVideoIndex);
-
-      var currentVideoId = "#video-" + currentVideoIndex;
-      iframe = $(currentVideoId)[0];
-      player = $f(iframe);
-      
-      console.log("currentVideoId:", currentVideoId);
-      console.log("iframe:", iframe);
-      console.log("player:", player);
-
-      
-      player.addEvent('ready', function() {
-        player.addEvent('finish', playNextVideo);
-      });
-      
-      currentVideoIndex = currentVideoIndex + 1;
-      
-      console.log("currentVideoIndex:", currentVideoIndex);
-
-    };
-
-    playNextVideo();
-});
-
-<!--vimeo code -->
 
 </html>
