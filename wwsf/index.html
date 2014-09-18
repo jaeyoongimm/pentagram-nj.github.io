@@ -509,10 +509,11 @@
 <!--vimeo code -->
   $(function() {
     var currentVideoIndex = 0;
+    var iframe, player;
     var playNextVideo = function() {
       var currentVideoId = "#video-" + currentVideoIndex;
-      var iframe = $(currentVideoId)[0];
-      var player = $f(iframe);
+      iframe = $(currentVideoId)[0];
+      player = $f(iframe);
       
       player.addEvent('ready', function() {
         player.addEvent('finish', playNextVideo);
