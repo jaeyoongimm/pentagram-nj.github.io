@@ -1,0 +1,47 @@
+<iframe id="video0" class="lazy" src="http://player.vimeo.com/video/104755287?title=0&byline=0&portrait=0&color=ff9933&autoplay=0&player_id=video0&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="width: 600px; height: 300px; margin-top:-1px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
+<iframe id="video1" class="lazy" src="http://player.vimeo.com/video/104755287?title=0&byline=0&portrait=0&color=ff9933&autoplay=0&player_id=video1&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="width: 600px; height: 300px; margin-top:-1px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
+
+        <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script> 
+        <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> 
+
+        <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
+
+<script>
+            var currentVideoIndex = 0;
+
+            var showActiveVideo = function (videoID) {
+                $("#video0").hide();
+                $("#video1").hide();
+                $("#video" + videoID).show();
+            };
+
+            var playNextVideo = function () {
+                var iframe, player;
+                showActiveVideo(currentVideoIndex);
+
+                console.log("playNextVideo function is running.");
+                console.log("currentVideoIndex:", currentVideoIndex);
+
+                var currentVideoId = "#video" + currentVideoIndex;
+                iframe = $(currentVideoId)[0];
+                player = $f(iframe);
+
+                console.log("currentVideoId:", currentVideoId);
+                console.log("iframe:", iframe);
+                console.log("player:", player);
+
+                player.addEvent('ready', function () {
+                    console.log("player ready");
+                    player.api('play');
+                    player.addEvent('finish', function () {
+                        console.log("player finished");
+                        currentVideoIndex = (currentVideoIndex + 1) % 2;
+                        playNextVideo();
+                    });
+                });
+            };
+
+            playNextVideo();
+
+        </script>

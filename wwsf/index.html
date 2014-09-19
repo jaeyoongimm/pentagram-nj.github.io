@@ -315,24 +315,44 @@
 
           <div class="embed-container" style="z-index: 0; width: 100%;">
 
+<!--
 
+            <div id="video-one"> -->
 
-            <div id="video-one">
+              
               <div class="colorband-one" style="z-index: ; height: 10%;">
-                <h6 style="padding-top: 4px;">Toronto</h6>
+                <h6 style="padding-top: 4px;">Video</h6>
               </div>
-              <iframe id="video0" class="lazy" src="http://player.vimeo.com/hubnut/album/3041688?title=0&amp;byline=0&amp;portrait=0&amp;color=ff9933&amp;autoplay=1&amp;player_id=video0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="margin-top:-1px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
 
-              <iframe id="video0" class="lazy" src="http://player.vimeo.com/video/104755287?title=0&amp;byline=0&amp;portrait=0&amp;color=ff9933&amp;autoplay=0&amp;player_id=video0&amp;api=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="margin-top:-1px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
-          
+
+              <iframe id="video0" src="http://player.vimeo.com/video/104755287?title=0&byline=0&portrait=0&color=ff9933&autoplay=1&player_id=video0&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:-1px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
+
+              <iframe id="video1" src="http://player.vimeo.com/video/104755287?title=0&byline=0&portrait=0&color=ff9933&autoplay=0&player_id=video1&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:-1px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
+
+
+
+
+
+
+<!-- hubnut-->
+ <!--
+              <iframe id="video0" class="lazy" src="http://player.vimeo.com/hubnut/album/3041688?title=0&amp;byline=1&amp;portrait=0&amp;color=ff9933&amp;autoplay=1&amp;player_id=video0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="margin-top:18px; padding-top:0px; bottom: 0px; z-index: -100; ">Loading</iframe>
+
+-->
+
+
+
+
+
+<!--
+
             </div>
+-->
 
 
 
-
-
-
-
+<!-- future video embed -->
+<!--
             <div id="video-two" style="opacity: 1">
               <div class="colorband-two" style="z-index: ; height: 10%;">
                 <h6 style="padding-top: 4px;">Santo Domingo</h6>
@@ -404,7 +424,7 @@
               <iframe id="video9" class="lazy" src="http://player.vimeo.com/video/104755287?title=0&amp;byline=0&amp;portrait=0&amp;color=ff9933&amp;autoplay=0&amp;player_id=video9&amp;api=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="margin-top:-1px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
           
             </div>
-
+-->
 
           </div>
               
@@ -457,6 +477,8 @@
 
            <div class="square_z_half_one" style="padding-top: 0; margin-top: 0; max-height: 171.36px; background-color: ;"> 
 
+
+
             <div class="sc_wrapper" style="width:100%; height: 100%; background-color: black; display:inline-block; position: absolute;">
 
                   <div class="wrapped" style="width: 171.36px; height: 171.36px; overflow: hidden; position: absolute;">
@@ -492,12 +514,59 @@
   </div>
 </div>
   </body>
+
+
+
+
+
         <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script> 
         <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>        
-        <script src="js/lazy_min.js"></script> 
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> 
+        <!--       
+        <script src="js/lazymin.js"></script> -->
         <script src="home_min.js"></script>
         <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
+
+          <script> 
+
+
+            var currentVideoIndex = 0;
+
+            var showActiveVideo = function (videoID) {
+                $("#video0").hide();
+                $("#video1").hide();
+                $("#video" + videoID).show();
+            };
+
+            var playNextVideo = function () {
+                var iframe, player;
+                showActiveVideo(currentVideoIndex);
+
+                console.log("playNextVideo function is running.");
+                console.log("currentVideoIndex:", currentVideoIndex);
+
+                var currentVideoId = "#video" + currentVideoIndex;
+                iframe = $(currentVideoId)[0];
+                player = $f(iframe);
+
+                console.log("currentVideoId:", currentVideoId);
+                console.log("iframe:", iframe);
+                console.log("player:", player);
+
+                player.addEvent('ready', function () {
+                    console.log("player ready");
+                    player.api('play');
+                    player.addEvent('finish', function () {
+                        console.log("player finished");
+                        currentVideoIndex = (currentVideoIndex + 1) % 2;
+                        playNextVideo();
+                    });
+                });
+            };
+
+            playNextVideo();
+
+        </script>
 
 
 
@@ -505,8 +574,6 @@
 
 
         <script src="js/gistfile1.js" type="text/javascript" charset="utf-8"></script>
-
-
 
 
         <script>
@@ -533,6 +600,14 @@
           <!--superslider -->
 
           <!--vimeo code -->
+
+
+
+
+
+
+        /*
+
             $(function() {
               console.log("vimeo function is running.");
               var currentVideoIndex = 0;
@@ -568,7 +643,7 @@
           
               playNextVideo();
           });
-          
+          */
           <!--vimeo code -->
         </script>
 

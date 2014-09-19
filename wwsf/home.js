@@ -1,3 +1,42 @@
+            var currentVideoIndex = 0;
+
+            var showActiveVideo = function (videoID) {
+                $("#video0").hide();
+                $("#video1").hide();
+                $("#video" + videoID).show();
+            };
+
+            var playNextVideo = function () {
+                var iframe, player;
+                showActiveVideo(currentVideoIndex);
+
+                console.log("playNextVideo function is running.");
+                console.log("currentVideoIndex:", currentVideoIndex);
+
+                var currentVideoId = "#video" + currentVideoIndex;
+                iframe = $(currentVideoId)[0];
+                player = $f(iframe);
+
+                console.log("currentVideoId:", currentVideoId);
+                console.log("iframe:", iframe);
+                console.log("player:", player);
+
+                player.addEvent('ready', function () {
+                    console.log("player ready");
+                    player.api('play');
+                    player.addEvent('finish', function () {
+                        console.log("player finished");
+                        currentVideoIndex = (currentVideoIndex + 1) % 2;
+                        playNextVideo();
+                    });
+                });
+            };
+
+            playNextVideo();
+
+
+
+
 var map;
 var brooklyn = new google.maps.LatLng(16.467694, -42.932149);
 
@@ -403,6 +442,8 @@ google.maps.event.addListener(marker_six_second, 'click', function() {
 
 
 }
+
+
 
 
       $( document ).ready(function() {
