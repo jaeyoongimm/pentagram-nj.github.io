@@ -1496,7 +1496,7 @@ max-height: 93.5454545455px;
 .colorband-one {
   width: 100%;
   height: 13.888888889%;
-  background-color: rgba(250, 166, 62, 1);
+  background-color: rgba(255, 167, 60, 1);
   float: left;
   margin-top: 0;
   z-index: -1;
@@ -1506,7 +1506,7 @@ max-height: 93.5454545455px;
 .colorband-one-a {
   width: 100%;
   height: 6.9444444445%;
-  background-color: rgba(250, 166, 62, 1);
+  background-color: rgba(255, 167, 60, 1);
   float: left;
   margin-top: 0;
   z-index: -1;
@@ -1519,7 +1519,7 @@ max-height: 93.5454545455px;
 .colorband-two {
   width: 100%;
   height: 13.888888889%;
-  background-color: rgba(207, 211, 39, 1);
+  background-color: rgba(210, 255, 0, 1);
   float: left;
   margin-top: 0;
   z-index: -1;
@@ -1529,7 +1529,7 @@ max-height: 93.5454545455px;
 .colorband-two-a {
   width: 100%;
   height: 6.9444444445%;
-  background-color: rgba(207, 211, 39, 1);
+  background-color: rgba(210, 255, 0, 1);
   float: left;
   margin-top: 0;
   z-index: -1;
@@ -1541,7 +1541,7 @@ max-height: 93.5454545455px;
 .colorband-three {
   width: 100%;
   height: 13.888888889%;
-  background-color: rgba(185, 81, 159, 1);
+  background-color: rgba(255, 0, 255, 1);
   float: left;
   margin-top: 0;
   z-index: -1;
@@ -1551,7 +1551,7 @@ max-height: 93.5454545455px;
 .colorband-three-a {
   width: 100%;
   height: 6.9444444445%;
-  background-color: rgba(185, 81, 159, 1);
+  background-color: rgba(255, 0, 255, 1);
   float: left;
   margin-top: 0;
   z-index: -1;
@@ -1563,7 +1563,7 @@ max-height: 93.5454545455px;
 .colorband-four {
   width: 100%;
   height: 13.888888889%;
-  background-color: rgba(110, 205, 221, 1);
+  background-color: rgba(0, 255, 255, 1);
   float: left;
   margin-top: 0;
   z-index: -1;
@@ -1573,7 +1573,7 @@ max-height: 93.5454545455px;
 .colorband-four-a {
   width: 100%;
   height: 6.9444444445%;
-  background-color: rgba(110, 205, 221, 1);
+  background-color: rgba(0, 255, 255, 1);
   float: left;
   margin-top: 0;
   z-index: -1;
@@ -1586,7 +1586,7 @@ max-height: 93.5454545455px;
 .colorband-five {
   width: 100%;
   height: 13.888888889%;
-    background-color: rgba(237, 31, 36, 1);
+    background-color: rgba(255, 0, 0, 1);
 
   float: left;
   margin-top: 0;
@@ -1598,7 +1598,7 @@ max-height: 93.5454545455px;
 .colorband-five-a {
   width: 100%;
   height: 6.9444444445%;
-    background-color: rgba(237, 31, 36, 1);
+    background-color: rgba(255, 0, 0, 1);
 
   float: left;
   margin-top: 0;
@@ -1612,7 +1612,7 @@ max-height: 93.5454545455px;
 .colorband-six {
   width: 100%;
   height: 13.888888889%;
-  background-color: rgba(240, 85, 134, 1);
+  background-color: rgba(255, 87, 135, 1);
   float: left;
   margin-top: 0;
   z-index: -1;
@@ -1623,7 +1623,7 @@ max-height: 93.5454545455px;
 .colorband-six-a {
   width: 100%;
   height: 6.9444444445%;
-  background-color: rgba(240, 85, 134, 1);
+  background-color: rgba(255, 87, 135, 1);
   float: left;
   margin-top: 0;
   z-index: -1;
@@ -1635,7 +1635,7 @@ max-height: 93.5454545455px;
 .colorband-seven {
   width: 100%;
   height: 13.888888889%;
-    background-color: rgba(86, 169, 222, 1);
+    background-color: rgba(52, 177, 255, 1);
   float: left;
   margin-top: 0;
   z-index: -1;
@@ -1646,7 +1646,7 @@ max-height: 93.5454545455px;
 .colorband-seven-a {
   width: 100%;
   height: 6.9444444445%;
-    background-color: rgba(86, 169, 222, 1);
+    background-color: rgba(52, 177, 255, 1);
   float: left;
   margin-top: 0;
   z-index: -1;
@@ -1657,7 +1657,7 @@ max-height: 93.5454545455px;
 .colorband-eight {
   width: 100%;
   height: 13.888888889%;
-  background-color: rgba(105, 189, 69, 1);
+  background-color: rgba(0, 255, 0, 1);
   float: left;
   margin-top: 0;
   z-index: -1;
@@ -1668,7 +1668,7 @@ max-height: 93.5454545455px;
 .colorband-eight-a {
   width: 100%;
   height: 6.9444444445%;
-  background-color: rgba(105, 189, 69, 1);
+  background-color: rgba(0, 255, 0, 1);
   float: left;
   margin-top: 0;
   z-index: -1;
@@ -1681,7 +1681,7 @@ max-height: 93.5454545455px;
 .colorband-nine {
   width: 100%;
   height: 13.888888889%;
-  background-color: rgba(243, 236, 25, 1);
+  background-color: rgba(255, 255, 0, 1);
   float: left;
    margin-top: 0;
    z-index: -1;
@@ -1692,7 +1692,7 @@ max-height: 93.5454545455px;
 .colorband-nine-a {
   width: 100%;
   height: 6.9444444445%;
-  background-color: rgba(243, 236, 25, 1);
+  background-color: rgba(255, 255, 0, 1);
   float: left;
    margin-top: 0;
    z-index: -1;
@@ -1705,7 +1705,7 @@ max-height: 93.5454545455px;
 .colorband-ten {
   width: 100%;
   height: 13.888888889%;
-  background-color: rgba(216, 153, 196, 1);
+  background-color: rgba(255, 145, 255, 1);
   float: left;
    margin-top: 0;
    z-index: -1;
@@ -1715,7 +1715,7 @@ max-height: 93.5454545455px;
 .colorband-ten-a {
   width: 100%;
   height: 6.9444444445%;
-  background-color: rgba(216, 153, 196, 1);
+  background-color: rgba(255, 145, 255, 1);
   float: left;
    margin-top: 0;
    z-index: -1;
@@ -1736,7 +1736,7 @@ max-height: 93.5454545455px;
   
 }
 
-.colorband-eleven-a {
+.colorband-eleven-a { 
   width: 100%;
   height: 6.9444444445%;
   background-color: rgba(0,0,0,1);
