@@ -539,13 +539,31 @@
             var currentVideoIndex = randNum;
 
             var playRandomVideo = function () {
-                var iframe = document.getElementById('#video'+randNum);
-                var player = $f(iframe);
-                  player.api("play");
+                $("#video0").hide();
+                $("#video1").hide();
+                $("#video2").hide();
+                $("#video3").hide();
+                $("#video4").hide();
+                $("#video5").hide();
+                $("#video6").hide();
+                $("#video7").hide();
+                $("#video8").hide();
+                $("#video9").hide();
+                $("#video10").hide();
+                $("#video" + currentVideoIndex).show();
+                console.log("playRandomVideo function is running.");
+
+                var currentVideoId = "#video" + currentVideoIndex;
+                iframe = $(currentVideoId)[0];
+                player = $f(iframe);
+
+                player.addEvent('ready', function() { 
+                    player.api('play');
+                });
+
 
             };
 
-            playRandomVideo();
 
             var showActiveVideo = function (videoID) {
                 $("#video0").hide();
@@ -589,6 +607,11 @@
                     });
                 });
             };
+
+
+            playRandomVideo();
+
+
 
             playNextVideo();
 
