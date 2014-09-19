@@ -1,5 +1,5 @@
 var map;
-var brooklyn = new google.maps.LatLng(16.467694, -42.932149);
+var brooklyn = new google.maps.LatLng(27.1373681,-42.0170383);
 
 
 
@@ -90,7 +90,7 @@ function initialize() {
   var myLatlng10 = new google.maps.LatLng(45.5601451,-73.7120832);
   var myLatlng11 = new google.maps.LatLng(40.7212149,-73.9970065);
   var myLatlng12 = new google.maps.LatLng(40.6211925,22.9460273,13);
-
+  var myLatlng13 = new google.maps.LatLng(52.5075419,13.4261419);
 
   var iconOne = 'icon-1.png';
   var iconTwo = 'icon-2.png';
@@ -112,17 +112,12 @@ function initialize() {
   var largeFive = 'large5.png';
   var largeSix = 'large6.png';
   var largeSixSec = 'large6sec.png';
+  var largeSixThird = 'large6third.png';
   var largeSeven = 'large7.png';
   var largeEight = 'large8.png';
   var largeNine = 'large9.png';
   var largeTen = 'large10.png';
   var largeEleven = 'large11.png';
-
-
-
-
-
-
 
 
   var marker_one = new google.maps.Marker({
@@ -204,7 +199,12 @@ function initialize() {
       //title:"Hello World!",
       icon: iconSix
   });
-
+  var marker_six_third = new google.maps.Marker({
+      position: myLatlng13,
+      map: map,
+      //title:"Hello World!",
+      icon: iconSix
+  });
 
 
   marker_one.setAnimation(google.maps.Animation.DROP);
@@ -219,6 +219,10 @@ function initialize() {
   marker_ten.setAnimation(google.maps.Animation.DROP);
 
    marker_eleven.setAnimation(google.maps.Animation.DROP);
+
+     marker_six_second.setAnimation(google.maps.Animation.DROP);
+  marker_six_third.setAnimation(google.maps.Animation.DROP);
+
 
 google.maps.event.addDomListener(window, "resize", function() {
    var center = map.getCenter();
@@ -389,6 +393,19 @@ google.maps.event.addListener(marker_six_second, 'click', function() {
     window.location.href = 'project6.html'
 });
 
+
+//marker 6_third
+
+google.maps.event.addListener(marker_six_third, 'mouseover', function() {
+    marker_six_third.setIcon(largeSixThird);
+    this.setOptions({zIndex:999+1});
+});
+google.maps.event.addListener(marker_six_third, 'mouseout', function() {
+    marker_six_third.setIcon(iconSix);
+});
+google.maps.event.addListener(marker_six_third, 'click', function() {
+    window.location.href = 'project6.html'
+});
 
 
 
