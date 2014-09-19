@@ -249,9 +249,15 @@ height: 1220px;
 
 
 
-
-
-
+.imageimage {
+    position:relative;
+    top:50%;
+    left:30%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 60%;
+}
 
 
 

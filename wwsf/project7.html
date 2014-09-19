@@ -162,7 +162,39 @@
           });
 
           // Gallery image slider
+        var images = ['2','3','4'];
+        var max = images.length;
 
+        var curSrc = $('.imageimage').attr('src');
+
+        var curID = curSrc.replace(/.*\/(.*?)\.jpg/i, '$1');
+
+        var curIdx = 0;
+
+        while (curIdx < max) {
+            if (images[curIdx] == curID) {
+                break;
+            }
+            curIdx++;
+        }
+
+        var imgSrcBase = 'assets/gallery/7/';
+
+        $('.arrow-right').click( function() {
+            curIdx = (curIdx+1) % max;
+            $('.imageimage').fadeOut(function() {
+                $(this).attr('src', imgSrcBase+images[curIdx]+'.jpg').fadeIn("100");
+            });
+
+
+        });
+
+        $('.arrow-left').click( function() {
+            curIdx = (curIdx+max-1) % max;
+            $('.imageimage').fadeOut(function() {
+                $(this).attr('src', imgSrcBase+images[curIdx]+'.jpg').fadeIn("100");
+            });
+        });
 
              
       });
@@ -257,7 +289,12 @@
             <div style="width:100%; text-align:center; z-index: 999; height: 1200px;">
 
 <!-- images -->
-            <img class="imageimage" src="assets/gallery/7/1.jpg" style="max-width: 60%; margin-top:30%; margin-bottom: 50%; position: relative;" />
+          <div style="width:100%; max-width: 1200px; height:1200px; max-height:1200px;">
+            <img class="imageimage" src="assets/gallery/7/1.jpg" style="" /></img>
+
+
+
+          </div>
 
 
 
