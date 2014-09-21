@@ -486,7 +486,7 @@
     <div style="width: 100%;">
 
 
-           <div class="square_z_half_one" style="padding-top: 0; margin-top: 0; max-height: 171.36px; background-color: pointer-events: auto;"> 
+           <div class="square_z_half_one" style="left:1px; padding-top: 0; margin-top: 0; max-height: 171.36px; background-color: pointer-events: auto;"> 
 
 
 
@@ -508,7 +508,7 @@
 
             </div>
 
-            <div class="square_z_half_two"></div>
+            <div class="square_z_half_two" style="left: 1px;"></div>
       </div>
 
 
@@ -618,7 +618,7 @@ http://player.vimeo.com/video/104755287?portrait=1&color=ff9933&autoplay=0&playe
                     player.api('play');
                     player.addEvent('finish', function () {
                         console.log("player finished");
-                        currentVideoIndex = (currentVideoIndex + 1 % 10);
+                        currentVideoIndex = ((currentVideoIndex + 1) % 10);
                         playNextVideo();
                     });
                 });
