@@ -20,7 +20,7 @@
               <img class="calclose" src="assets/icons/close_icon.png" style="width:100%; height:100%; z-index: 10; position: absolute;" />
             </div>
 
-      <div class="information" style="overflow: hidden; padding-bottom: 0; max-height: 514.28px;">
+      <div class="information" style="overflow: hidden; padding-bottom: 0; max-height: 467px;">
         <div style="-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-o-filter: grayscale(100%);-ms-filter: grayscale(100%);filter: grayscale(100%);">
 
         <iframe src="https://www.google.com/calendar/embed?title=WWSf%20Calendar&amp;showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;hl=en&amp;bgcolor=%23ffffff&amp;src=vb%40storefrontnews.org&amp;color=%2323164E&amp;ctz=America%2FNew_York" style=" border-width:0 " width="858" height="514.28" frameborder="0" scrolling="no"></iframe>
@@ -62,13 +62,13 @@
 
       <div class="info-wrapper" style="height: 100%; overflow:hidden;">
 
-        <div class="info-text" style="height: 58%; max-height: 455px;">
+        <div class="info-text" style="height: 58%; max-height: 409.5px;">
               <h1>Worldwide Storefront</br>
 
                 September 19 &mdash; November 21, 2014</h1><p>
             <div style="height:3px; width:100%; clear:both;"></div>
 
-              <div class="textbox" style="position: absolute; font-size: 0.9em; overflow: scroll">
+              <div class="textbox" style="position: absolute; font-size: 0.9em;">
                      <div style="height:0.4em; width:100%; clear:both;"></div>
 
 
@@ -330,6 +330,8 @@
 
               <iframe id="video0" src="http://player.vimeo.com/video/104755287?portrait=1&color=ff9933&autoplay=0&player_id=video0&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
 
+
+
               <iframe id="video1" src="http://player.vimeo.com/video/104755285?portrait=0&color=ff9933&autoplay=0&player_id=video1&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
 
               <iframe id="video2" src="http://player.vimeo.com/video/104755285?portrait=0&color=ff9933&autoplay=0&player_id=video2&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
@@ -341,7 +343,6 @@
               <iframe id="video8" src="http://player.vimeo.com/video/104756759?portrait=0&color=ff9933&autoplay=0&player_id=video2&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
               <iframe id="video9" src="http://player.vimeo.com/video/106532691?portrait=0&color=ff9933&autoplay=0&player_id=video2&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
               <iframe id="video10" src="http://player.vimeo.com/video/104558735?portrait=0&color=ff9933&autoplay=0&player_id=video2&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
-
 
 
 <!-- hubnut-->
@@ -496,8 +497,8 @@
                   <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" style="max-width:100%;" width="100%" height="600" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
                     <param name="allowscriptaccess" value="always" />
                     <param class="lazy" name="src" value="http://player.soundcloud.com/player.swf?url=https://w.soundcloud.com/player/?url=https://soundcloud.com/worldwidestorefront/sets/homepage&amp;auto_play=true&amp;player_type=artwork&amp;color=999999&amp;sharing=false&amp;show_playcount=false" />
-                    <embed class="lazy" type="application/x-shockwave-flash" width="100%" height="600" src="http://player.soundcloud.com/player.swf?url=https://soundcloud.com/worldwidestorefront/sets/homepage&amp;auto_play=true&amp;player_type=artwork&amp;color=999999&amp;sharing=false&amp;show_playcount=false" allowscriptaccess="always">
-                    </embed>
+                    <iframe id="soundcloud_player" class="lazy" type="application/x-shockwave-flash" width="100%" height="600" src="http://player.soundcloud.com/player.swf?url=https://soundcloud.com/worldwidestorefront/sets/homepage&amp;auto_play=true&amp;player_type=artwork&amp;color=999999&amp;sharing=false&amp;show_playcount=false" allowscriptaccess="always">
+                    </iframe>
                   </object>
                   </div>
                   </div>
@@ -538,6 +539,19 @@
             var randNum = Math.floor(Math.random()*11);
             var currentVideoIndex = randNum;
 
+            var vimeoid = ['104755287', '106597524', '104755285', '104751662', '104751664', '104755286', '106403990', '106298529', '104756759', '106532691', '104558735'];
+
+
+
+
+
+
+/*
+http://player.vimeo.com/video/104755287?portrait=1&color=ff9933&autoplay=0&player_id=video0&api=1
+
+*/
+
+/*
             var playRandomVideo = function () {
                 $("#video0").hide();
                 $("#video1").hide();
@@ -562,7 +576,10 @@
                 });
 
 
-            };
+            };*/
+
+
+
 
 
             var showActiveVideo = function (videoID) {
@@ -577,9 +594,8 @@
                 $("#video8").hide();
                 $("#video9").hide();
                 $("#video10").hide();
-
                 $("#video" + videoID).show();
-
+                $("#video" + videoID).api("play");
             };
 
             var playNextVideo = function () {
@@ -608,8 +624,6 @@
                 });
             };
 
-
-            playRandomVideo();
             playNextVideo();
 
         </script>
@@ -618,7 +632,7 @@
         <script src="https://www.google.com/calendar/969ff39784188d8d017a0c60c8f2558aembedcompiled__en_gb.js" type="text/javascript"></script>
         <script src="js/jquery.superslides_min.js" type="text/javascript" charset="utf-8"></script>
 
-
+        <script src="https://w.soundcloud.com/player/api.js"></script>
 
         <script>
         
@@ -689,6 +703,53 @@
           });
           */
           <!--vimeo code -->
+
+
+          <!-- soundcloud --> 
+          var widget = null;
+          var song_indexes = [];
+          var current_index = 0;
+
+          $(function() {
+              var iframe = document.querySelector('#soundcloud_player iframe');
+              widget = SC.Widget(iframe);        
+              widget.bind(SC.Widget.Events.READY, function() {
+                  widget.bind(SC.Widget.Events.FINISH, function() {        
+                      play_next_shuffled_song();
+                  });
+
+                  widget.getSounds(function(sounds) {
+                      create_shuffled_indexes(sounds.length);
+                      play_next_shuffled_song();
+                  });               
+              });
+              $("#button_sc_next").on("click", play_next_shuffled_song);
+          });
+
+          function play_next_shuffled_song() {
+              if (current_index >= song_indexes.length) {
+                  current_index = 0;
+              }
+              var track_number = song_indexes[current_index];
+              current_index++;
+              widget.skip(track_number);
+              console.log(track_number);
+          }
+
+          function create_shuffled_indexes (num_songs) {
+              for (var i=0;i<num_songs;i++) {
+                  song_indexes.push(i);
+              }
+              song_indexes = shuffle(song_indexes);
+          }
+
+          //+ Jonas Raoni Soares Silva
+          //@ http://jsfromhell.com/array/shuffle [v1.0]
+          function shuffle(o){ //v1.0
+              for(var j, x, i = o.length; i; j = parseInt((Math.random() * i),10), x = o[--i], o[i] = o[j], o[j] = x);
+              return o;
+          }
+
         </script>
 
 
