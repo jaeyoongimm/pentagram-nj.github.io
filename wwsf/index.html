@@ -602,7 +602,7 @@
                     player.api('play');
                     player.addEvent('finish', function () {
                         console.log("player finished");
-                        currentVideoIndex = (currentVideoIndex + 1 % 10);
+                        currentVideoIndex = ((currentVideoIndex + 1) % 10);
                         playNextVideo();
                     });
                 });
