@@ -580,7 +580,12 @@ http://player.vimeo.com/video/104755287?portrait=1&color=ff9933&autoplay=0&playe
 
 
 
+            var playFirstVideo = function (){
 
+
+
+
+            };
 
             var showActiveVideo = function (videoID) {
                 $("#video0").hide();
@@ -595,13 +600,12 @@ http://player.vimeo.com/video/104755287?portrait=1&color=ff9933&autoplay=0&playe
                 $("#video9").hide();
                 $("#video10").hide();
                 $("#video" + videoID).show();
-                $("#video" + videoID).api("play");
+                $("#video" + videoID).api('play');
             };
 
             var playNextVideo = function () {
                 var iframe, player;
                 showActiveVideo(currentVideoIndex);
-
                 console.log("playNextVideo function is running.");
                 console.log("currentVideoIndex:", currentVideoIndex);
 
