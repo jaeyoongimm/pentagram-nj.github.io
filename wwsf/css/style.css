@@ -14,7 +14,7 @@ html{
 
 body{ 
   //bottom: 10px;
-  max-width: 1200px;
+  max-width: 1080px;
   //margin: 0 auto;
   //background-color: white;
 }
@@ -151,9 +151,9 @@ iframe {
   z-index: 900;
   position: absolute;
   width: 100%;
-    max-width: 1200px;
-height: 1220px;
-      max-height: 1220px;
+    max-width: 1080px;
+height: 1098px;
+      max-height: 1098px;
       overflow:hidden;
 
   background-color: rgba(0,0,0,0.8);
@@ -171,9 +171,9 @@ height: 1220px;
   z-index: 900;
   position: absolute;
   width: 100%;
-  max-width: 1200px;
-height: 1220px;
-      max-height: 1220px;
+  max-width: 1080px;
+height: 1098px;
+      max-height: 1098px;
 
   background-color: rgba(0,0,0,0.8);
 
@@ -189,9 +189,9 @@ height: 1220px;
   z-index: 900;
   position: absolute;
   width: 100%;
-  max-width: 1200px;
-  height: 1220px;
-  max-height: 1220px;
+  max-width: 1080px;
+  height: 1098px;
+  max-height: 1098px;
   background-color: rgba(0,0,0,0.85);
 }
 
@@ -237,10 +237,10 @@ height: 1220px;
   position: absolute;
   width: 100%;
   margin-top: 0;
-  height: 1371.43px;
+  height: 1098px;
   padding-bottom: 5%;
   background-color: rgba(0,0,0,0.8);
-  max-height: 1371.43px;
+  max-height: 1098px;
   overflow: hidden;
 
 }
@@ -267,7 +267,7 @@ height: 1220px;
 
 .g-overlay {
 
-    max-width: 1200px;
+    max-width: 1080px;
 
     visibility: hidden;
     opacity: 0;
@@ -299,8 +299,8 @@ height: 1220px;
   position: absolute;
   width: 100%;
   //padding-bottom: 41.58%;
-    height: 1440px;
-  max-height: 1440px;
+    height: 1296px;
+  max-height: 1296px;
 
   background-color: rgba(0,0,0,0.8);
 
@@ -330,7 +330,7 @@ height: 1220px;
 .info_wrapper {
 
   padding-bottom: 50%;
-  max-height: 1000px;
+  max-height: 1080px;
 }
 
 .info-text{

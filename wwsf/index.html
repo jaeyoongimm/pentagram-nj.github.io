@@ -6,8 +6,8 @@
     <meta name="mobile-web-app-capable" content="yes">
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" type="text/css" href="css/stylemin.css">
-        <link rel="stylesheet" type="text/css" href="css/home_min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/home.css">
         <link rel="stylesheet" type="text/css" href="https://www.google.com/calendar/969ff39784188d8d017a0c60c8f2558aembedcompiled_fastui.css">
 
   </head>
@@ -491,12 +491,12 @@
 
             <div class="sc_wrapper" style="width:100%; height: 100%; background-color: black; display:inline-block; position: absolute; pointer-events: auto">
 
-                  <div class="wrapped" style="width: 171.36px; height: 171.36px; overflow: hidden; position: absolute;">
+                  <div class="wrapped" style="width: 100%; height: 100%; overflow: hidden; position: absolute;">
                   <div style="float: left; top: 0; left:0;"> 
-                  <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="171.36" style="max-width:100%;" height="600" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+                  <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" style="max-width:100%;" width="100%" height="600" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
                     <param name="allowscriptaccess" value="always" />
                     <param class="lazy" name="src" value="http://player.soundcloud.com/player.swf?url=https://w.soundcloud.com/player/?url=https://soundcloud.com/worldwidestorefront/sets/homepage&amp;auto_play=true&amp;player_type=artwork&amp;color=999999&amp;sharing=false&amp;show_playcount=false" />
-                    <embed class="lazy" type="application/x-shockwave-flash" width="171.36" height="600" src="http://player.soundcloud.com/player.swf?url=https://soundcloud.com/worldwidestorefront/sets/homepage&amp;auto_play=true&amp;player_type=artwork&amp;color=999999&amp;sharing=false&amp;show_playcount=false" allowscriptaccess="always">
+                    <embed class="lazy" type="application/x-shockwave-flash" width="100%" height="600" src="http://player.soundcloud.com/player.swf?url=https://soundcloud.com/worldwidestorefront/sets/homepage&amp;auto_play=true&amp;player_type=artwork&amp;color=999999&amp;sharing=false&amp;show_playcount=false" allowscriptaccess="always">
                     </embed>
                   </object>
                   </div>
@@ -529,7 +529,7 @@
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> 
         <!--       
         <script src="js/lazymin.js"></script> -->
-        <script src="home_min.js"></script>
+        <script src="home.js"></script>
         <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
 
           <script> 
@@ -602,12 +602,14 @@
                     player.api('play');
                     player.addEvent('finish', function () {
                         console.log("player finished");
-                        currentVideoIndex = ((currentVideoIndex + 1) % 10);
+                        currentVideoIndex = (currentVideoIndex + 1 % 10);
                         playNextVideo();
                     });
                 });
             };
 
+
+            playRandomVideo();
             playNextVideo();
 
         </script>

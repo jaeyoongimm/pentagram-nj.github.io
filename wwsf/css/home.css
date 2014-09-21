@@ -1,11 +1,10 @@
      #map-canvas {
         background-color: white;
         width: 99.8%;
-        max-width: 1200px;
+        max-width: 1080px;
         padding-bottom: 86.90%;
         z-index: -90;
         position: absolute;
-        //margin: 0px auto;
         margin-top: -0.06%;
         margin-left: -0.0%;
 
@@ -20,35 +19,24 @@
         -ms-transform: translate(-50%, 0%); /* IE 9 */
         -webkit-transform: translate(-50%, 0%); /* Chrome, Safari, Opera */
         transform: translate(-50%, 0%);
-
-        //margin-left: auto;
-        //margin-right: auto;
-        //padding: 0 auto;
         top: 0px;
         width: 100%;
-        max-width: 1200px;
+        max-width: 1080px;
         z-index: -90;
         background: black;
         text-align: left;
-        max-height: 1371.42857143px;
+        max-height: 1234.287px;
 
 
       }
-
       html{
-        //margin: auto 0;
         clear: both;
         background: black;
         min-width: 100%;
         width: 100%;
-        //max-width: 1200px;
-        //max-width: auto;
-        //padding-bottom: 86.90%;
         z-index: -70;
-        //position: relative;
         text-align: center;
-        //overflow: scroll;
-        //max-height: 1371.42857143px;
+
       }
 
 
@@ -60,6 +48,5 @@
         height: 100%;        
         margin: 0 auto;
         position: absolute;
-        //overflow: hidden;
         z-index: 1;
       }
