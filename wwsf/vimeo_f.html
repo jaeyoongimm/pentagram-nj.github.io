@@ -1,5 +1,7 @@
 <style>
-
+	.video{
+		display: none;
+	}
 </style>
 <iframe class="video" id="video0" src="http://player.vimeo.com/video/104755287?portrait=1&color=ff9933&autoplay=0&player_id=video0&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
 
@@ -41,7 +43,7 @@ $(document).ready(function() {
     
     function play(playerID){
         console.log("playing:", playerID);
-        
+
         $('#' + playerID).show();
     }
     

@@ -488,8 +488,11 @@ google.maps.event.addListener(marker_six_third, 'click', function() {
 
 
           });
-             
-      });
+
+ 
+});
+
+
 
 
 
