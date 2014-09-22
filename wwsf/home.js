@@ -1,13 +1,11 @@
-
-
-
 var map;
-var brooklyn = new google.maps.LatLng(16.467694, -42.932149);
+var brooklyn = new google.maps.LatLng(27.1373681,-42.0170383);
 
 
 
 var MY_MAPTYPE_ID = 'custom_style';
 
+google.maps.event.addDomListener(window, 'load', initialize);
 
 
 function initialize() {
@@ -17,7 +15,7 @@ function initialize() {
       stylers: [
         { hue: '#fff' },
         { visibility: 'on' },
-        { gamma: 0.57 },
+        { gamma: 0.65 },
         { weight: 0.4 },
         { saturation: -100 }
       ]
@@ -55,6 +53,30 @@ function initialize() {
 
   map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
 
+/*
+    var pathOne = [
+      new google.maps.LatLng(37.772323, -122.214897),
+      new google.maps.LatLng(21.291982, -157.821856),
+      new google.maps.LatLng(-18.142599, 178.431),
+      new google.maps.LatLng(-27.46758, 153.027892)
+    ];
+
+
+
+
+    var flightPathOne = new google.maps.Polyline({
+      path: pathOne,
+      geodesic: true,
+      strokeColor: '#FF0000',
+      strokeOpacity: 1.0,
+      strokeWeight: 2
+    });
+
+    flightPathOne.setMap(map);
+
+
+*/
+
 
   var myLatlng1 = new google.maps.LatLng(43.6606141,-79.3527294);
   var myLatlng2 = new google.maps.LatLng(18.457300, -69.948630);
@@ -63,11 +85,12 @@ function initialize() {
   var myLatlng5 = new google.maps.LatLng(32.0878802,34.797246);
   var myLatlng6 = new google.maps.LatLng(44.9397075,-93.1060534);
   var myLatlng7 = new google.maps.LatLng(42.4422877,-76.4983749);
-  var myLatlng8 = new google.maps.LatLng(38.008336, -41.599441);
+  var myLatlng8 = new google.maps.LatLng(17.1490283, -36.6693794,5);
   var myLatlng9 = new google.maps.LatLng(34.0204989,-118.4117325);
   var myLatlng10 = new google.maps.LatLng(45.5601451,-73.7120832);
   var myLatlng11 = new google.maps.LatLng(40.7212149,-73.9970065);
-
+  var myLatlng12 = new google.maps.LatLng(40.6211925,22.9460273,13);
+  var myLatlng13 = new google.maps.LatLng(52.5075419,13.4261419);
 
   var iconOne = 'icon-1.png';
   var iconTwo = 'icon-2.png';
@@ -88,17 +111,13 @@ function initialize() {
   var largeFour = 'large4.png';
   var largeFive = 'large5.png';
   var largeSix = 'large6.png';
+  var largeSixSec = 'large6sec.png';
+  var largeSixThird = 'large6third.png';
   var largeSeven = 'large7.png';
   var largeEight = 'large8.png';
   var largeNine = 'large9.png';
   var largeTen = 'large10.png';
   var largeEleven = 'large11.png';
-
-
-
-
-
-
 
 
   var marker_one = new google.maps.Marker({
@@ -174,6 +193,19 @@ function initialize() {
       icon: iconEleven
   });
 
+  var marker_six_second = new google.maps.Marker({
+      position: myLatlng12,
+      map: map,
+      //title:"Hello World!",
+      icon: iconSix
+  });
+  var marker_six_third = new google.maps.Marker({
+      position: myLatlng13,
+      map: map,
+      //title:"Hello World!",
+      icon: iconSix
+  });
+
 
   marker_one.setAnimation(google.maps.Animation.DROP);
   marker_two.setAnimation(google.maps.Animation.DROP);
@@ -187,6 +219,10 @@ function initialize() {
   marker_ten.setAnimation(google.maps.Animation.DROP);
 
    marker_eleven.setAnimation(google.maps.Animation.DROP);
+
+     marker_six_second.setAnimation(google.maps.Animation.DROP);
+  marker_six_third.setAnimation(google.maps.Animation.DROP);
+
 
 google.maps.event.addDomListener(window, "resize", function() {
    var center = map.getCenter();
@@ -344,7 +380,32 @@ google.maps.event.addListener(marker_eleven, 'click', function() {
     window.location.href = 'project11.html'
 });
 
+//marker 6_second
 
+google.maps.event.addListener(marker_six_second, 'mouseover', function() {
+    marker_six_second.setIcon(largeSixSec);
+    this.setOptions({zIndex:999+1});
+});
+google.maps.event.addListener(marker_six_second, 'mouseout', function() {
+    marker_six_second.setIcon(iconSix);
+});
+google.maps.event.addListener(marker_six_second, 'click', function() {
+    window.location.href = 'project6.html'
+});
+
+
+//marker 6_third
+
+google.maps.event.addListener(marker_six_third, 'mouseover', function() {
+    marker_six_third.setIcon(largeSixThird);
+    this.setOptions({zIndex:999+1});
+});
+google.maps.event.addListener(marker_six_third, 'mouseout', function() {
+    marker_six_third.setIcon(iconSix);
+});
+google.maps.event.addListener(marker_six_third, 'click', function() {
+    window.location.href = 'project6.html'
+});
 
 
 
@@ -360,16 +421,144 @@ google.maps.event.addListener(marker_eleven, 'click', function() {
 
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
-  
-
-//JQeury
 
 
-    $(function () {
 
-        var height = $('.square').width; 
+      $( document ).ready(function() {
 
-        $(".square").css("height", height);
-    });
+          $( ".open" ).click(function( event ) {
+       
+
+              $( ".overlay" ).css({
+                  'visibility' : 'visible',
+                   'opacity' : '1',
+                   'pointer-events' : 'auto',
+                }),
+
+           $( ".info-text" ).css({
+                   'pointer-events' : 'auto',
+                });   
+
+          });
+
+          $( ".close" ).click(function( event ) {
+       
+              $( ".overlay" ).css({
+
+
+                'visibility' : 'hidden',
+                  'opacity' : '0',
+                   'pointer-events' : 'none',
+                }),
+
+           $( ".info-text" ).css({
+                   'pointer-events' : 'none',
+                });     
+
+
+          });
+
+//audio play button
+
+          $( "#audio_on" ).click(function( event ) {
+       
+          });
+
+//opens overlay for calendar
+
+          $( ".calendar" ).click(function( event ) {
+       
+
+              $( ".calendaroverlay" ).css({
+                  'opacity' : '1',
+                   'visibility' : 'visible',
+                   'pointer-events' : 'auto'
+                });
+          });
+
+
+          $( ".calclose" ).click(function( event ) {
+       
+
+              $( ".calendaroverlay" ).css({
+                   'opacity' : '0',
+                   'visibility' : 'hidden',
+                   'pointer-events' : 'none'
+                })  
+
+
+          });
+
+           $(function() {
+            $('#slides').superslides({
+              hashchange: true,
+              play: 2500,
+              inherit_width_from: '.wide-container',
+              inherit_height_from: '.wide-container'
+            });
+
+            $('#slides').on('mouseenter', function() {
+              $(this).superslides('stop');
+              console.log('Stopped')
+            });
+            $('#slides').on('mouseleave', function() {
+              $(this).superslides('start');
+              console.log('Started')
+            });
+          });
+          
+});
+
+
+          var randomInt = function (min, max) {
+              return Math.floor(Math.random() * (max - min + 1) + min);
+          }
+
+          var showActiveVideo = function (videoID) {
+                $("#video0").hide();
+                $("#video1").hide();
+                $("#video2").hide();
+                $("#video3").hide();
+                $("#video4").hide();
+                $("#video5").hide();
+                $("#video6").hide();
+                $("#video7").hide();
+                $("#video8").hide();
+                $("#video9").hide();
+                $("#video10").hide();
+
+              $("#video" + videoID).show();
+          };
+
+          var currentVideoIndex = randomInt(0, 10);
+
+          var playNextVideo = function () {
+              var iframe, player;
+              showActiveVideo(currentVideoIndex);
+
+              console.log("playNextVideo function is running.");
+              console.log("currentVideoIndex:", currentVideoIndex);
+
+              var currentVideoId = "#video" + currentVideoIndex;
+              iframe = $(currentVideoId)[0];
+              player = $f(iframe);
+
+              console.log("currentVideoId:", currentVideoId);
+              console.log("iframe:", iframe);
+              console.log("player:", player);
+
+              player.addEvent('ready', function () {
+                  console.log("player ready");
+                  player.api('play');
+                  player.addEvent('finish', function () {
+                      console.log("player finished");
+                      currentVideoIndex = (currentVideoIndex + 1) % 10;
+                      playNextVideo();
+                  });
+              });
+          };
+
+          playNextVideo(); 
+
+
 

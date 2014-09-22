@@ -3,123 +3,193 @@
 <html>
   <head>
 
-  	<title>WWSf: The Portal</title>
-
-
-		  	<?php 
-		/* Short and sweet */
-		define('WP_USE_THEMES', false);
-		require('/blog/wp-blog-header.php');
-		?>
-
-
-
+  	<title>WWSf: Storefront for Art and Architecture</title>
 
   	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link href='css/panorama_viewer.css' rel='stylesheet' type='text/css'>
+
 
   	<!-- Javascript -->
     <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
     <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-	<script src="project.js"></script>
+  	<script src="project.js"></script>
+    <script type="text/javascript" src="js/jquery.panorama_viewer.min.js"></script>
+	
 
-	<style>
+
+
+  <style>
 	html, body, main { bottom: 0; margin: 0 auto; padding-bottom: 0;}
-
+html { max-height: 1200px;}
 
 	</style>
 
 	<script>
-	/*		
 
-		$(document).ready(function(){
-			   
-			   var wH = $(window).height();
-
-			   var w1 = wH * 0.8572;
-
-			   var w2 = wH * 0.0649454545;
-
-			   $('body, .blog, .left-nav, .right-nav').css({height: w1});
-
-			   $('.nav-item1, .nav-item2, .nav-item3, .nav-item4, .nav-item5, .nav-item6, .nav-item7, .nav-item8, .nav-item9, .nav-item10, .nav-item11').css({height: w2});
-
-		});
-
-*/
 
 	</script>
 
-<!--
-    <script type="text/javascript"> 
-
-
-		$(document).ready(function(){
-
-
-			$(".left-nav").click(function(){
-
-				#(this).css({opacity: 0.5}, 200);
-
-			})
-
-		  $(".nav-item1").mouseenter(function(){
-		  	$(".colorband-one").css({height: 100px}, 100);
-		  	})
-		  $(".nav-item1").mouseleave(function(){
-		  	$(".colorband-one").animate({opacity: 0}, 500);
-		  	})
-
-		}
-
-});
-
-
-
-    </script>
-
--->
-<!--
-
-    <script type="text/javascript">
-      $(document).ready(function() {
-
-         $("#myblog").load('http://entirelynew.net/wwsf/blog/');
+  <script>
+  // Use $(window).load() on live site instead of document ready. This is for the purpose of running locally only
+    $(document).ready(function(){
+      $(".panorama").panorama_viewer({
+        repeat: true
       });
+    });
+    
+  </script>
+
+	<script> 
+
+      $( document ).ready(function() {
 
 
+      	//VIDEO
+
+          $( "#video-button" ).click(function( event ) {
+       
+              $( ".video-overlay" ).css({
+                  'visibility' : 'visible',
+                   'opacity' : '1',
+                   'pointer-events' : 'auto',
+                }),
+
+           $( ".info-text" ).css({
+                   'pointer-events' : 'auto',
+                });   
+
+          });
+
+          $( ".video-close" ).click(function( event ) {
+       
+              $( ".video-overlay" ).css({
 
 
+                'visibility' : 'hidden',
+                  'opacity' : '0',
+                   'pointer-events' : 'none',
+                }),
 
-    </script> -->
-<!--
+           $( ".info-text" ).css({
+                   'pointer-events' : 'none',
+                });     
 
-	<script type="text/javascript">
-	    $(document).ready(function(){
-	    $.ajaxSetup({cache:false});
-	    $("h2 a").click(function(){
-	        var post_id = $(this).attr("rel")
-	        $("#your_post_here").html("loading...");
-	        $("#your_post_here").load("http://<?php echo $_SERVER[HTTP_HOST]; ?>/triqui-ajax/",{id:post_id});
-	        return false;
-	    });
-	});
+
+          });
+
+          // 360
+
+
+          $( "#ts-button" ).click(function( event ) {
+       
+
+              $( ".ts-overlay" ).css({
+                  'visibility' : 'visible',
+                   'opacity' : '1',
+                   'pointer-events' : 'auto',
+                }),
+
+           $( ".info-text" ).css({
+                   'pointer-events' : 'auto',
+                });   
+
+          });
+
+          $( ".ts-close" ).click(function( event ) {
+       
+              $( ".ts-overlay" ).css({
+
+
+                'visibility' : 'hidden',
+                  'opacity' : '0',
+                   'pointer-events' : 'none',
+                }),
+
+           $( ".info-text" ).css({
+                   'pointer-events' : 'none',
+                });     
+
+
+          });
+
+
+          // Gallery
+
+
+          $( "#gallery-button" ).click(function( event ) {
+       
+
+              $( ".gallery-overlay" ).css({
+                  'visibility' : 'visible',
+                   'opacity' : '1',
+                   'pointer-events' : 'auto',
+                }),
+
+           $( ".info-text" ).css({
+                   'pointer-events' : 'auto',
+                });   
+
+          });
+
+          $( ".gallery-close" ).click(function( event ) {
+       
+              $( ".gallery-overlay" ).css({
+
+
+                'visibility' : 'hidden',
+                  'opacity' : '0',
+                   'pointer-events' : 'none',
+                }),
+
+           $( ".info-text" ).css({
+                   'pointer-events' : 'none',
+                });     
+
+
+          });
+
+          // Gallery image slider
+
+        var images = ['1'];
+        var max = images.length;
+
+        var curSrc = $('.imageimage').attr('src');
+
+        var curID = curSrc.replace(/.*\/(.*?)\.jpg/i, '$1');
+
+        var curIdx = 0;
+
+        while (curIdx < max) {
+            if (images[curIdx] == curID) {
+                break;
+            }
+            curIdx++;
+        }
+
+        var imgSrcBase = 'assets/gallery/11/';
+
+        $('.arrow-right').click( function() {
+            curIdx = (curIdx+1) % max;
+            $('.imageimage').fadeOut(function() {
+                $(this).attr('src', imgSrcBase+images[curIdx]+'.jpg').fadeIn("100");
+            });
+
+
+        });
+
+        $('.arrow-left').click( function() {
+            curIdx = (curIdx+max-1) % max;
+            $('.imageimage').fadeOut(function() {
+                $(this).attr('src', imgSrcBase+images[curIdx]+'.jpg').fadeIn("100");
+            });
+        });
+             
+      });
+            
 	</script>
--->
-
-		<script> 
-
-		$(document).ready(function(){
-		    $('#content').hover(function() {
-		        $("#content").addClass('transition');
-		    
-		    }, function() {oveClass('transition');
-		    });
-		});
-		        $("#content").rem
-
-			</script>
 
 
 
@@ -131,15 +201,102 @@
 
 
 
-  	<!-- overlay gallery --> 
+  	<!-- video overlay --> 
 
+    <div class="video-overlay">
 
-
-    <div class="g-overlay">
-
-    	             <div class="square_w_image" style="float: right;">
-              <img class="close" src="assets/icons/close_icon.png" style="width:100%; height:100%; z-index: 10; position: absolute;" />
+             <div class="square_w_image" style="float: right;">
+              <img class="video-close" src="assets/icons/close_icon.png" style="width:100%; height:100%; z-index: 10; position: absolute;" />
             </div>
+
+            <div style="position:absolute; width: 100%; text-align: center;">
+
+            <div style="margin-top: 14.28%; position:absolute; text-align: center; width:100%; padding-top: 2px;padding-bottom: 30px;">
+
+            <div style="width:100% height: 100%;">
+
+            <iframe stye="z-index:9999;" src="http://player.vimeo.com/video/104558735?title=0&amp;byline=0&amp;portrait=0&amp;color=ff9933&amp;autoplay=0&amp;loop="  width="1000" height="562" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>Loading</iframe>
+            </div>
+
+            </div>
+          </div>
+
+
+      </div>
+
+    </div>
+
+
+
+
+
+  	<!-- ts overlay --> 
+
+    <div class="ts-overlay">
+
+             <div class="square_w_image" style="float: right;">
+              <img class="ts-close" src="assets/icons/close_icon.png" style="width:100%; height:100%; z-index: 10; position: absolute;" />
+            </div>
+
+
+
+            <div style="margin-top: 14.28%; position:absolute; text-align: center; width:100%; padding-top: 30px; padding-bottom: 30px;">
+
+
+
+               <div class="panorama">
+     
+                
+                  <img src="assets/panorama/panorama-eleven.jpg" style="height: 57.12%;"/>
+                
+                </div>
+
+
+            </div> 
+
+
+
+    </div>
+
+
+
+  	<!-- gallery overlay --> 
+      <div class="gallery-overlay">
+
+             <div class="square_w_image" style="right: 0px; position: absolute; z-index:9; float: right;">
+
+              <img class="gallery-close lazy" src="assets/icons/close_icon.png" style="width:100%; height:100%; z-index: 10; position: absolute;" />
+            </div>
+<!--
+             <div class="square_w_image" style="right:0px; z-index: 999; position: absolute; margin-top: 550px; border: none;">
+              <img class="arrow-right lazy" src="assets/icons/arrows.png" style="width: 100%; height: 100%;"/>
+            </div>
+
+             <div class="square_w_image" style="z-index: 999; position: absolute; top: 550px; position: absolute; float: left; border: none;">
+              <img class="arrow-left lazy" src="assets/icons/arrows2.png" style="width:100%; height:100%; " />
+            </div>
+-->
+            <div style="width:100%; text-align:center; z-index: 999; height: 1098px;">
+
+<!-- images -->
+          <div style="width:100%; max-width: 1098px; height:1098px; max-height:1098px;">
+            <img class="imageimage" src="assets/gallery/11/1.jpg" style="" /></img>
+
+
+
+          </div>
+
+
+
+          </div>
+
+    </div>
+
+
+
+
+
+
 
 
 <!--
@@ -188,161 +345,222 @@
     <!-- header --> 
 
 
-  	<div class="row" style="wdith: 100%, padding-bottom: 14.28%;">
+    <div class="row" style="wdith: 100%, padding-bottom: 14.28%;">
       <div class="square_w_image">
-   		<a href="index.html">
+      <a href="index.html">
 
         <img src="assets/still/sf01.png" style="width:100%; height:100%; position: absolute;" /></a>
       </div>
-  		<div class="mid" style="padding-bottom: 14.28%;">
 
-  			<div class="colorband-one-a"></div>
-  			<h2>RavinePortal</h2>
+      <div class="mid" style="padding-bottom: 14.28%;">
 
+        <div class="colorband-eleven-a"></div>
+        <h2 style="margin-top: -8px;">Storefront for</br>Art and</br>Architecture</h2>
 
-  		</div>
-  		 <div class="mid" style="padding-bottom: 14.28%;">
-  		 	<div class="colorband-one-a"></div>
-  		 	<div style="padding: 25px; position:absolute;">
-  		 	<h7>Location</h7>
-  		 	          <div style="height:0.1px; width:100%; clear:both;"></div>
-
-  		 	<h8>Toronto, Canada</h8>
-  		 	          <div style="height:0.1px; width:100%; clear:both;"></div>
-
-  		 	<h7>Participants</h7>
-  		 	          <div style="height:0.1px; width:100%; clear:both;"></div>
-
-  		 	<h8>Megan Torza</h8>
-  		 	          <div style="height:0.1px; width:100%; clear:both;"></div>
-
-  		 </div>
-  		 	
-
-  		 </div>
-
-	<div class="square_w_image">        
-	<img src="assets/still/sf00.png" style="width:100%; height:100%; position: absolute;" />
       </div>
-	<div class="square_w_image">        
-	<img src="http://lorempixel.com/g/300/300/sports" style="width:100%; height:100%; position: absolute; z-index: 1;" />
-		<img id="video-button" src="assets/icons/video.png" style="width:100%; height:100%; position: absolute; z-index: 2;" />
+
+
+       <div class="mid" style="padding-bottom: 14.28%; border-right: 0px">
+        <div class="colorband-eleven-a"></div>
+        <div style="padding-left: 18px; padding-top:13px; position:absolute;">
+        <h7>Location</h7>
+                  <div style="margin-top: -10px;height:0.1px; width:100%; clear:both;"></div>
+
+        <h8 id="small">New York City, USA</h8>
+                  <div style="margin-top: -4px; height:0.1px; width:100%; clear:both;"></div>
+
+        <h7>Curators</h7>
+                  <div style="margin-top: -10px; height:0.1px; width:100%; clear:both;"></div>
+
+        <h8 id="small">Eva Franch i Gilabert 
+</br>
+
+
+          <p style="margin-top: 3.5px;">Carlos Mínguez Carrasco,</p>
+          <p style="margin-top: 14.5px;">Associate Curator</p></h8>
+
+                  <div style="height:0.1px; width:100%; clear:both;"></div>
+
+       </div>
+      
+       </div>
+
+
+
+      <!--
+
+  		 <div class="mid" style="padding-bottom: 14.28%; border-right: 1px">
+        <div class="colorband-eleven-a"></div>
+        <div style="padding-left: 22px; padding-top:18px; position:absolute;">
+        <h7>Location</h7>
+                  <div style="height:0.1px; width:100%; clear:both;"></div>
+
+        <h8>New York City, USA</h8>
+                  <div style="height:0.1px; width:100%; clear:both;"></div>
+
+        <h7>Participants</h7>
+                  <div style="height:0.1px; width:100%; clear:both;"></div>
+
+        <h8>Participant 1, Participant 2</h8>
+                  <div style="height:0.1px; width:100%; clear:both;"></div>
+
+       </div>
+        
+
+       </div> -->
+
+  <div class="square_w_image">        
+  <img src="assets/still/sf00.png" style="width:100%; height:100%; position: absolute;" />
       </div>
+  <div class="square_w_image">        
+	<img src="assets/thumb/thumb11.png" style="width:100%; height:100%; position: absolute; z-index: 1;" />
+    <img id="video-button" src="assets/icons/video.png" style="width:100%; height:100%; position: absolute; z-index: 2;" />
+      </div>
+
 
 
   	<!-- main --> 
 
 
-  	<div style="width: 100%; height: 86.9%;">
+    <div style="width: 100%; height: 86.9%;">
 
-  	<div class="left-nav">
+    <div class="left-nav">
 
-		<div class="nav-item1" style="width: 100%; height: auto;">
-	
-			<div class="n-item">
-						<div class="colorband-one"></div>
-						<div class="colorband-one-end"></div>
-			<h3>RAVINE</br>PORTAL</h3>
-			</div>
-		</div>
-
-
-		<div class="nav-item2" style="width: 100%;">
-
-			<div class="n-item">
-
-			<div class="colorband-two"></div>
-			<h3>TROPICAL</br>GHOSTS (TBC)</h3>
-						</div>
-
-		</div>
-
-		<div class="nav-item3" style="width: 100%;">
+    <div class="nav-item1" style="width: 100%; height: auto;">
+  
+      <a href="project1.html">
+      <div class="n-item">
+            <div class="colorband-one"></div>
+            <div class="colorband-one-end"></div>
+      <h3>RAVINE</br>PORTAL</h3>
+      </div>
+    </a>
+    </div>
 
 
-
-			<div class="n-item">
-
-			<div class="colorband-three"></div>
-			<h3>GALLERY</br>ATTACHMENT</h3>
-		</div>
-	</div>
+    <div class="nav-item2" style="width: 100%;">
 
 
-		<div class="nav-item4" style="width: 100%;">
-			<div class="n-item">
+      <a href="project2.html">
 
-			<div class="colorband-four"></div>
-			<h3>MICRO-</br>GEOGRAPHIES</h3>
-			</div>
-		</div>
+      <div class="n-item">
+      <div class="colorband-two"></div>
+      <h3>TROPICAL</br>GHOSTS</h3>
+            </div>
+          </a>
+    </div>
 
-		<div class="nav-item5" style="width: 100%;">
+    <div class="nav-item3" style="width: 100%;">
 
-			<div class="n-item">
-
-			<div class="colorband-five"></div>
-			<h3>NEXT</br>STATION</h3>
-		</div>
-		</div>
-
-		<div class="nav-item6">
-			
-
-			<div class="n-item">
-
-			<div class="colorband-six"></div>
-			<h3>HMONG TOWN</br>MARKETPLACE</h3>
-		</div>
-		</div>
-
-		<div class="nav-item7">
-			<div class="n-item">
-
-			<div class="colorband-seven"></div>
-			<h3>CIRCUS FOR</br>CONST-</br>RUCTION</h3>
-		</div>
-	</div>
+      <a href="project3.html">
 
 
-		<div class="nav-item8">
-			<div class="n-item">
+      <div class="n-item">
 
-			<div class="colorband-eight"></div>
-			<h3>CONTAINER</br>ART</br>RESIDENCY</h3>
-		</div>
-		</div>
+      <div class="colorband-three"></div>
+      <h3>GALLERY</br>ATTACHMENT</h3>
+    </div>
+  </a>
+  </div>
 
-		<div class="nav-item9">
-			<div class="n-item">
 
-			<div class="colorband-nine"></div>
-			<h3>HOST:</br>NATURAL</br>HISTORIES</h3>
-		</div>
-		</div>
+    <div class="nav-item4" style="width: 100%;">
 
-		<div class="nav-item10">
-		<div class="n-item">
+      <a href="project4.html">
+      <div class="n-item">
 
-			<div class="colorband-ten"></div>
-			<h3>A TO B -</br>CROSSING THE</br>RAILWAY</h3>
-		</div>
-		</div>
+      <div class="colorband-four"></div>
+      <h3>MICRO-</br>GEOGRAPHIES</h3>
+      </div>
+    </a>
+    </div>
 
-		<div class="nav-item11">
-			
-			<div class="n-item">
-			<div class="colorband-eleven"></div>
-			<h3>STOREFRONT FOR ART AND ARCHITECTURE</h3>
-		</div>
-		</div>
+    <div class="nav-item5" style="width: 100%;">
+
+
+      <a href="project5.html">
+
+      <div class="n-item">
+
+      <div class="colorband-five"></div>
+      <h3>NEXT</br>STATION</h3>
+    </div>
+  </a>
+    </div>
+
+    <div class="nav-item6">
+      
+      <a href="project6.html">
+
+      <div class="n-item">
+
+      <div class="colorband-six"></div>
+      <h3>STOREFRONT</br>MARKETPLACE</h3>
+    </div>
+  </a>
+    </div>
+
+    <div class="nav-item7">
+      <a href="project7.html">
+
+      <div class="n-item">
+
+      <div class="colorband-seven"></div>
+      <h3>CIRCUS FOR</br>CONST-</br>RUCTION</h3>
+    </div>
+  </a>
+  </div>
+
+
+    <div class="nav-item8">
+      <a href="project8.html">
+
+      <div class="n-item">
+
+      <div class="colorband-eight"></div>
+      <h3>CONTAINER</br>ARTIST</br>RESIDENCY</h3>
+    </div>
+    </a>
+    </div>
+
+    <div class="nav-item9">
+      <a href="project9.html">
+
+      <div class="n-item">
+
+      <div class="colorband-nine"></div>
+      <h3>HOST:</br>NATURAL HISTORIES FOR LA</h3>
+    </div>
+  </a>
+    </div>
+
+    <div class="nav-item10">
+    <a href="project10.html">
+
+    <div class="n-item">
+
+      <div class="colorband-ten"></div>
+      <h3>A TO B -</br>CROSSING THE</br>RAILWAY</h3>
+    </div>
+  </a>
+    </div>
+
+    <div class="nav-item11">
+        <a href="project11.html">
+    
+      <div class="n-item">
+      <div class="colorband-eleven"></div>
+      <h3 id="bw">STOREFRONT FOR ART AND ARCHITECTURE</h3>
+    </div>
+  </a>
+    </div>
 
       <div class="square_w_image_nav">
-        <img src="assets/gif/w1.gif" style="width:100%; height:100%; z-index: 10; position: absolute;" />
+        <img class="lazy" src="assets/gif/w1.gif" style="width:100%; height:100%; z-index: 10; position: absolute;" />
       </div>
 
 
-  	</div>
+    </div>
 
 
 
@@ -353,10 +571,10 @@
 	<div class="n-item" style="">
 
 
-		<div>
+		<div style="width:100%; height:100%;">
 
 
-		<iframe src ="http://entirelynew.net/wwsf/blog" width="100%" height="2400px">
+		<iframe src ="http://wwstorefront.org/blog/storefront" width="100%" height="100%" style="overflow: scroll;">
 		  <p>Your browser does not support iframes.</p>
 		</iframe>
 
@@ -368,30 +586,41 @@
 
 
  
-	<div class="right-nav" style="overflow: scroll;">
-		<div class="n-item">
+  <div class="right-nav" >
+    <div class="n-item">
 
-				<div class="nav-item-right" style="backgroud-color: black; padding-bottom: 100%; overflow: scroll;">
-				
-						<div style="color: white;">
+        <div class="nav-item-right" style="backgroud-color: black; padding-bottom: 100%; bottom: 15px;">
+        
 
-							<h5 style="font-size: 1.2em; font-weight: 400;"><b>About the Project</b><p>
+            <div style="position: relative; top:15px; left:15px; margin-right: 15px; bottom: 15px; width: 100%; clear:both;">
 
-								          <div style="height:0.5em; width:100%; clear:both;"></div>
+              <h5 style="color: white; font-size: 0.945em; font-weight: 400; margin-bottom: 25px; max-height: 272px; overflow: auto;"><b>About the Project</b><p>
+
+                          <div style="height:0.3em; width:100%; clear:both;"></div>
+
+What new cultural, social and spatial paradigms can emerge from the intersection of the physical and the digital platforms that ground our contemporary lives?
+<div style="height:0.3em; width:100%; clear:both;"></div>
+World Wide Storefront &mdash; WWSf &mdash; is a mode of action; its aim is to unveil, produce and discuss experimental cultural works on a global scale from local points of view. By using the ability of contemporary means of communication to join space, undo place and avoid time, WWSf provides leadership in imagining future modes of global cultural production through digital and physical realms.
+<div style="height:0.3em; width:100%; clear:both;"></div>
+For the inaugural edition of World Wide Storefront, ten projects selected from an open call by an international jury, simultaneously present, for a two-month period, site-specific performances, exhibitions and events. Selected for their ability to produce alternative platforms within local contexts, the projects' scale of operation and action range from a transoceanic traveling artist residency, to food market spaces, to urban interventions in foreclosed ancient structures, to the construction and inhabitation of residual spaces and infrastructures in the city. 
+<div style="height:0.3em; width:100%; clear:both;"></div>
+Visitors to the Storefront gallery space in New York are able to access the projects through augmented reality applications and a digital portal onsite. Audiences can also access projects through a newly designed wwstorefront.org website. 
+<div style="height:0.3em; width:100%; clear:both;"></div>
+Contrasting with an intangible layer of digital content that connects the visitor 
+to the activities of the 10 worldwide locations is Situation NY, a site-specific installation by artist Jana Winderen and architect Marc Fornes in Storefront's gallery at 97 Kenmare Street. Reflecting on the contemporary conditions emerging between the digital and the physical realms, the collaboration of Winderen and Fornes, collapses sound, light and form in an object with intrinsic sensorial behaviors, inviting visitors to question the properties of matter and the built environment surrounding us. The installation is a vibrating sound experiment that aims to transform the architecture into animated sensible form. Conceived as a sound object that absorbs and contrasts the site specificity of the Storefront Gallery with abstract, spatial, formal and acoustic variations and compositions, Situation NY raises questions about context, sensorial readings, estrangement and the uncanny tangentially resonating with contemporary debates around the ontology of objects. 
 
 
-RavinePortal presents architectural, landscape and artistic interventions that address the physical and psychological disconnect between Toronto's dense urban environment and the 26,000 acres of ravine landscape that shape the city.								          
-<div style="height:0.8em; width:100%; clear:both;"></div>
-The exhibition explores the past and present role the ravines play in the life of the city, and the future potential of the ravine system as a defining, interconnected and accessible open space and cultural network. The exhibition program includes site-specific installations, tours, lectures, and collaborations between artists and the general public that demonstrates how to connect citizens of Toronto to the ravines in a way that is meaningful and sustainable.
+</h5>
 
 						</div> 
 
 				</div>
 
-				<div class="nav-item-right">
-
-					<img src="http://lorempixel.com/g/600/300/sports" style="width:100%; height: 100%; z-index=1;">
-					<img id="360-button" src="assets/icons/360_icon.png" style="position: absolute; top: 0; left: 0; width:100%; height: 100%; z-index=2;">
+				<div class="nav-item-right" style="width: 100%; padding-bottom: 50%; background-image: url(assets/panorama/panorama-eleven.jpg); background-repeat:no-repeat; background-position: center center;">
+<!--
+					<img src="assets/panorama/panorama-one.jpg" style="width:100%; z-index=1;">
+		-->
+    			<img id="ts-button" src="assets/icons/360_icon.png" style="position: absolute; top: 0; left: 0; width:100%; height: 100%; z-index=2;">
 
 				</div>
 
@@ -401,14 +630,14 @@ The exhibition explores the past and present role the ravines play in the life o
 		-->
 
 				<div style="">
-				<iframe width="100%" height="400px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/42389480&amp;color=ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+				<iframe width="100%" height="360px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/51582611&amp;color=000000&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 		        </div>   
 
 		        <div class="nav-item-right">
 
-					<img src="http://lorempixel.com/g/600/600/sports" style="width:100%; height: 100%;" />
+					<img src="assets/slides/slide11.png" style="width:100%; height: 100%;" />
 					<div style="width: 100%; font-size: 2em; position: absolute; text-align: center; bottom: 55%;">
-					<h1>Gallery</h1>
+					<h1 id="gallery-button">Gallery</h1>
 				</div>
 				</div>    
 
@@ -418,4 +647,4 @@ The exhibition explores the past and present role the ravines play in the life o
 
 
   </body>
-	
+</html>

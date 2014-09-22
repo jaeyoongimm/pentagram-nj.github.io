@@ -1,177 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-
-    <title>Worldwide Storefront</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-  
-<!--
-    <link type="text/css" rel="stylesheet" href="css/lightSlider.css" />-->
-
-    <link rel="stylesheet" href="css/superslides.css">
-
-
-    <link rel="stylesheet" href="css/bjqs.css">
-    <link rel="stylesheet" href="css/demo.css">
-
-    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
-    <link href="css/audiostyle.css" rel="stylesheet" type="text/css" />
-
-
-
-
-    
-    <!-- Javascript -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-
-
-
-    <script>
-
-
-    </script>
-
-
-
-    <style>
-
-      html, body, #map-canvas {
-        margin: 0px;
-        padding: 0px;
-        position: fixed;
-        z-index: 0;
-        top: 0px;
-        width: 100%;
-        padding-bottom: 86.90%;
-        right: 0px;        
-        z-index: -999;
-        position: absolute;
-
-
-      }
-
-      #map-canvas {
-
-        top: -0.06%;
-        left: -0.04%;
-
-      }
-
-
-      .wide-container{
-
-        float: right;
-        width: 100%;
-        height: 100%;        
-        margin: 0 auto;
-        position: absolute;
-        //overflow: hidden;
-        z-index: 1;
-
-
-      }
-
-
-    </style>
-
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-
-    <script src="home.js"></script>
-
-
-
+    <title>WWSf: Home</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="css/styleminHome.css">
+    <link rel="stylesheet" href="css/sc-player-standard.css" type="text/css">
 
   </head>
-
-
-
-
   <body>
+    <div id="map-canvas" data-tap-disabled="true"></div>
 
-
-    <script>
-
-
-
-      $( document ).ready(function() {
-
-          $( ".open" ).click(function( event ) {
-       
-
-              $( ".overlay" ).css({
-                   'opacity' : '1',
-                   'pointer-events' : 'auto',
-                }),
-
-           $( ".info-text" ).css({
-                   'pointer-events' : 'auto',
-                });   
-
-          });
-
-          $( ".close" ).click(function( event ) {
-       
-              $( ".overlay" ).css({
-                   'opacity' : '0',
-                   'pointer-events' : 'none',
-                }),
-
-           $( ".info-text" ).css({
-                   'pointer-events' : 'none',
-                });     
-
-
-          });
-
-//audio play button
-
-          $( "#audio_on" ).click(function( event ) {
-       
-          });
-
-//opens overlay for calendar
-
-          $( ".calendar" ).click(function( event ) {
-       
-
-              $( ".calendaroverlay" ).css({
-                   'opacity' : '1',
-                   'pointer-events' : 'auto'
-                });
-          });
-
-
-          $( ".calclose" ).click(function( event ) {
-       
-            alert("hello!");
-
-       /*
-              $( ".calendaroverlay" ).css({
-                   'opacity' : '0',
-                   'pointer-events' : 'none',
-                })  
-
-*/
-          });
-             
-      });
-            
-
-    </script>
-
-
-
-
-    <div id="map-canvas"></div>
-
-
+<div style="margin: auto 0;">
     <div class="calendaroverlay">
-
              <div class="square_w_image" style="float: right;">
               <img class="calclose" src="assets/icons/close_icon.png" style="width:100%; height:100%; z-index: 10; position: absolute;" />
             </div>
+
+      <div class="information" style="overflow: hidden; padding-bottom: 0; max-height: 467px;">
+        <div style="-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-o-filter: grayscale(100%);-ms-filter: grayscale(100%);filter: grayscale(100%);">
+
+        <iframe src="https://www.google.com/calendar/embed?title=WWSf%20Calendar&amp;showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;hl=en&amp;bgcolor=%23ffffff&amp;src=vb%40storefrontnews.org&amp;color=%2323164E&amp;ctz=America%2FNew_York" style=" border-width:0 " width="858" height="514.28" frameborder="0" scrolling="no"></iframe>
+
+
+      </div>
+      </div>
 
     </div>
     <div class="overlay">
@@ -180,12 +35,10 @@
               <img class="close" src="assets/icons/close_icon.png" style="width:100%; height:100%; z-index: 10; position: absolute;" />
             </div>
 
-      <div class="information">
-
+      <div class="information" style="overflow: hidden; max-height: 400px;">
 
         <div class="left-col">
 
-    
           <div class="square_w_image_nav">
               <img src="assets/still/wwsf06.png" style="width:100%; height:100%; z-index: 10; position: absolute;" />
             </div>      
@@ -203,43 +56,48 @@
               </div>      
 
           <div style="height:3px; width:100%; clear:both;"></div>
-
-          <div class="square_w_image_nav">
-                <img src="assets/still/sf01.png" style="width:100%; height:100%; z-index: 10; position: absolute;" />
-              </div>
-
-            </div>
+      </div>
 
 
+      <div class="info-wrapper" style="height: 100%; overflow:hidden;">
 
-      <div class="info-wrapper" style="height: 100%;">
+        <div class="info-text" style="height: 58%; max-height: 409.5px;">
+              <h1>Worldwide Storefront</br>
 
-        <div class="info-text" style="height: 58%;">
-              <h1>Worldwide Storefront</h1><p>
+                September 19 &mdash; November 21, 2014</h1><p>
             <div style="height:3px; width:100%; clear:both;"></div>
 
-              <div class="textbox" style="font-size: 1.25em;">
-                  Storefront for Art and Architecture announces a call for proposals for WorldWide Storefront ("WWSF"), a new initiative to provide a simultaneous, multi-locus of alternative spaces around the globe and a digital platform for the expression and exchange of latent desires within contemporary art and architecture practices.<p>   
-                     <div style="height:1em; width:100%; clear:both;"></div>
-
-                  WorldWide Storefront is a mode of action; its aim is to unveil, produce and discuss experimental cultural works on a global scale from local points of view. By using the ability of contemporary means of communication to join space, undo place and avoid time, WorldWide Storefront provides leadership in imagining future modes of cultural production.<p>
-
-                    <div style="height:1em; width:100%; clear:both;"></div>
-
-                  Storefront is seeking proposals from individuals or collectives across the globe with curatorial visions that articulate alternative positions within their particular context. Proposals should contain a two-month installation, series of exhibitions and/or events and identify a specific site where the project will be realized in relationship to the curatorial vision. Strong proposals
-                  will explore new spaces of cultural action that defy traditional notions of "gallery," "pavilion," or "cultural institution." Proposals should also propose new and innovative ways to digitally engage audiences globally.<p>
+              <div class="textbox" style="position: absolute; font-size: 0.9em;">
+                     <div style="height:0.4em; width:100%; clear:both;"></div>
 
 
-                    <div style="height:1em; width:100%; clear:both;"></div>
+                  <h1 style="font-size: 1.2em;">Situation NY: October 4 &mdash; November 21, 2014</h1></br>
 
-                  All proposals will be reviewed by an international jury of notables in the
-                  fields of art and architecture. Selected entries will be part of the WorldWide Storefront program and individuals will receive $1,000 in seed funding to start their project, as well as strategic outreach support and technical and logistical mentorship. From September 19 to November 21, 2014, all selected entries throughout the world will simultaneously open and have a two-month program of exhibitions and events. All events will be recorded and broadcast through the WorldWide Storefront online platform and presented at the Storefront for Art and Architecture Gallery in New York, which will operate as the central situation room.<p>
+                  What new cultural, social and spatial paradigms can emerge from the intersection of the physical and the digital platforms that ground our contemporary lives?<p>   
+                     <div style="height:0.4em; width:100%; clear:both;"></div>
 
-                    <div style="height:1em; width:100%; clear:both;"></div>
+                  World Wide Storefront &mdash; WWSf &mdash; is a mode of action; its aim is to unveil, produce and discuss experimental cultural works on a global scale from local points of view. By using the ability of contemporary means of communication to join space, undo place and avoid time, WWSf provides leadership in imagining future modes of global cultural production through digital and physical realms.<p>   
+                     <div style="height:0.4em; width:100%; clear:both;"></div>
 
-                  For additional information and instruction on how to submit, please download the document on the right hand side of this page. All proposals must be received by January 31, 2014.
+                  For the inaugural edition of World Wide Storefront, ten projects selected from an open call by an international jury, simultaneously present, for a two-month period, site-specific performances, exhibitions and events. Selected for their ability to produce alternative platforms within local contexts, the projects' scale of operation and action range from a transoceanic traveling artist residency, to food market spaces, to urban interventions in foreclosed ancient structures, to the construction and inhabitation of residual spaces and infrastructures in the city. <p>   
+                     <div style="height:0.4em; width:100%; clear:both;"></div>
+
+                  Visitors to the Storefront gallery space in New York are able to access the projects through augmented reality applications and a digital portal onsite. Audiences can also access projects through a newly designed wwstorefront.org website. <p>   
+                     <div style="height:0.4em; width:100%; clear:both;"></div>
+
+                  Contrasting with an intangible layer of digital content that connects the visitor to the activities of the 10 worldwide locations is Situation NY, a site-specific installation by artist Jana Winderen and architect Marc Fornes in Storefront's gallery at 97 Kenmare Street. Reflecting on the contemporary conditions emerging between the digital and the physical realms, the collaboration of Winderen and Fornes, collapses sound, light and form in an object with intrinsic sensorial behaviors, inviting visitors to question the properties of matter and the built environment surrounding us. The installation is a vibrating sound experiment that aims to transform the architecture into animated sensible form. Conceived as a sound object that absorbs and contrasts the site specificity of the Storefront Gallery with abstract, spatial, formal and acoustic variations and compositions, Situation NY raises questions about context, sensorial readings, estrangement and the uncanny tangentially resonating with contemporary debates around the ontology of objects. 
+                     <div style="height:1.2em; width:100%; clear:both;"></div>
+
+                    A discussion among the designers and a press preview takes place on October 3, 2014 at 6pm. RSVP to km@storefrontnews.org.
+                     <div style="height:0.4em; width:100%; clear:both;"></div>
+
+                    The online platform WWStorefront.org launches September 19, 2014. 
+                    The WWSF Coordinates launches October 3, 2014.
+                     <div style="height:0.4em; width:100%; clear:both;"></div>
+
+                    We invite you to download on your smart phone or digital device the free Junaio Application and use it to enter the World Wide Storefront by exploring with it this website, the gallery space and the world around you.                   
+
                   </div>
-
         </div>
       </div>
 
@@ -255,205 +113,123 @@
     <div class="row"> 
       <div class="square_w_image" >
         <a href="index.html">
-        <img class="gotohome" src="assets/gif/w1.gif" style="width:100%; height:100%; z-index: 10; position: absolute;" /></a>
+        <img class="gotohome lazy" src="assets/gif/w1.gif" style="width:100%; height:100%; z-index: 10; position: absolute;" /></a>
       </div>
       <div class="square"></div>
       <div class="square"></div>
       <div class="square"></div>      
 
-      <div class="square_w_image">
-        <img class="open" src="assets/gif/sf1.gif" style="width:100%; height:100%; z-index: 10; position: absolute;" />
+      <div class="square_w_image" style="border-right: 2px solid black; z-index: 80;">
+        <img class="open lazy" src="assets/gif/sf1.gif" style="width:100%; height:100%; z-index: 10; position: absolute;" />
       </div>
 
 
-      <div class="two-squares" style="margin: auto 0;">
-
-
+      <div class="two-squares" style="float: left; border-left: 0px solid black; margin: auto 0; z-index: 10; overflow: hidden;">
 
         <div class="wide-container">
 
               <div id="slides">
-                <div class="slides-container">
-
-
-                <div class="slide-one">
-                  <div class="colorband-one" style="height: 20%; z-index:90;">
+                <div class="slides-container" style="z-index: 0; pointer-events: auto;">
+              
+                <div class="slide-one" style="pointer-events: auto;">
+                  <div class="colorband-one" style="height: 18%; z-index:90;">
                     <h4 id="slider-title">Toronto</h4>
                   </div>
                   <a href="project1.html">
-                  <img src="http://lorempixel.com/801/400/fashion" alt="Cinelli"></a>
+                    <img class="lazy" src="assets/slides/slide1.png">
+                  </a>
                 </div>
 
-
                 <div class="slide-two">
-                  <div class="colorband-two" style="height: 20%; z-index:90;">
+                  <div class="colorband-two" style="height: 18%; z-index:90;">
                     <h4 id="slider-title">Santo Domingo</h4>
                   </div>
                   <a href="project2.html">
-                  <img src="http://lorempixel.com/801/400/fashion" alt="Cinelli">
-                </a>
+                    <img class="lazy" src="assets/slides/slide2.png">
+                  </a>
                 </div>
 
-
-
                 <div class="slide-three">
-                  <div class="colorband-three" style="height: 20%; z-index:90;">
+                  <div class="colorband-three" style="height: 18%; z-index:90;">
                     <h4 id="slider-title">Los Angeles</h4>
                   </div>
                   <a href="project3.html">
-                  <img src="http://lorempixel.com/801/400/fashion" alt="Cinelli"></a>
+                  <img class="lazy" src="assets/slides/slide3.png"></a>
                 </div>
 
-
-
                 <div class="slide-four">
-                  <div class="colorband-four" style="height: 20%; z-index:90;">
+                  <div class="colorband-four" style="height: 18%; z-index:90;">
                     <h4 id="slider-title">Athens</h4>
                   </div>
                   <a href="project4.html">
-                  <img src="http://lorempixel.com/801/400/fashion" alt="Cinelli"></a>
+                  <img class="lazy" src="assets/slides/slide4.png"></a>
                 </div>
 
-
                 <div class="slide-five">
-                  <div class="colorband-five" style="height: 20%; z-index:90;">
+                  <div class="colorband-five" style="height: 18%; z-index:90;">
                     <h4 id="slider-title">Tel Aviv</h4>
                   </div>
                   <a href="project5.html">
-                  <img src="http://lorempixel.com/801/400/fashion" alt="Cinelli"></a>
+                  <img class="lazy" src="assets/slides/slide5.png"></a>
                 </div>
 
-
-
                   <div class="slide-six">
-                  <div class="colorband-six" style="height: 20%; z-index:90;">
+                  <div class="colorband-six" style="height: 18%; z-index:90;">
                     <h4 id="slider-title">Minneapolis</h4>
                   </div>
                   <a href="project6.html">
-                  <img src="http://lorempixel.com/801/400/fashion" alt="Cinelli"></a>
+                  <img class="lazy" src="assets/slides/slide6.png"></a>
                 </div>
-
-
 
                 <div class="slide-seven">
-                  <div class="colorband-seven" style="height: 20%; z-index:90;">
+                  <div class="colorband-seven" style="height: 18%; z-index:90;">
                     <h4 id="slider-title">Itinerant</h4>
                   </div>
-                  <a href="project4.html">
-                  <img src="http://lorempixel.com/801/400/fashion" alt="Cinelli"></a>
+                  <a href="project7.html">
+                  <img class="lazy" src="assets/slides/slide7.png"></a>
                 </div>
 
-
-
                  <div class="slide-eight">
-                  <div class="colorband-eight" style="height: 20%; z-index:90;">
+                  <div class="colorband-eight" style="height: 18%; z-index:90;">
                     <h4 id="slider-title">Itinerant</h4>
                   </div>
-                  <a href="project5.html">
-                  <img src="http://lorempixel.com/801/400/fashion" alt="Cinelli"></a>
+                  <a href="project8.html">
+                  <img class="lazy" src="assets/slides/slide8.png"></a>
                 </div>
 
                  <div class="slide-nine">
-                  <div class="colorband-nine" style="height: 20%; z-index:90;">
+                  <div class="colorband-nine" style="height: 18%; z-index:90;">
                     <h4 id="slider-title">Los Angeles</h4>
                   </div>
-                  <a href="project1.html">
-                  <img src="http://lorempixel.com/801/400/fashion" alt="Cinelli"></a>
+                  <a href="project9.html">
+                  <img class="lazy" src="assets/slides/slide9.png"></a>
                 </div>
 
                  <div class="slide-ten">
-                  <div class="colorband-ten" style="height: 20%; z-index:90;">
+                  <div class="colorband-ten" style="height: 18%; z-index:90;">
                     <h4 id="slider-title">Montreal</h4>
                   </div>
-                  <a href="project1.html">
-                  <img src="http://lorempixel.com/801/400/fashion" alt="Cinelli"></a>
+                  <a href="project10.html">
+                  <img class="lazy" src="assets/slides/slide10.png"></a>
                 </div>
 
 
+                 <div class="slide-eleven">
+                  <div class="colorband-eleven" style="height: 18%; z-index:90;">
+                    <h4 id="slider-title" style="color: white;">New York City</h4>
+                  </div>
+                  <a href="project11.html">
+                  <img class="lazy" src="assets/slides/slide11.png"></a>
                 </div>
 
-<!--
-                <nav class="slides-navigation">
-                  <a href="#" class="next">Next</a>
-                  <a href="#" class="prev">Previous</a>
-                </nav> -->
+
+
+                </div>
               </div>
             </div>
           </div>
 
-
-
-
-<!--superslider -->
-
-
-        <script src="js/jquery.superslides.js" type="text/javascript" charset="utf-8"></script>
-
-        <script>
-          $(function() {
-            $('#slides').superslides({
-              hashchange: true,
-              play: 2500,
-              inherit_width_from: '.wide-container',
-              inherit_height_from: '.wide-container'
-            });
-
-            $('#slides').on('mouseenter', function() {
-              $(this).superslides('stop');
-              console.log('Stopped')
-            });
-            $('#slides').on('mouseleave', function() {
-              $(this).superslides('start');
-              console.log('Started')
-            });
-          });
-        </script>
-
-        <script>
-
-        function sound_return(){
-          var sound_array = ["sound1.mp3", "sound2.mp3"];
-          var sound = sound_array[Math.floor(Math.random() * sound_array.length)];
-          return sound;
-        }
-
-        var audioElement = document.createElement('audio');
-        audioElement.addEventListener("load", function() {
-            audioElement.play();
-            btn.hide();
-        }, true);
-        audioElement.addEventListener("ended", function() {
-            btn.show();
-        }, true);
-
-
-        var btn = $('#sound').click(function(event){
-            event.preventDefault();
-            audioElement.setAttribute('src', 'sound/'+sound_return());
-            audioElement.load();
-        });
-
-
-        </script>
-
-
-
-
-
-
-<!--
-        <audio id="player" controls="controls" autoplay="true" loop="loop">
-        <source src="song.php" type="audio/mpeg" />
-        </audio>
--->
-
-
-
   </div>
-
-<!-- -->
-
-
 
 
   <!-- row 2 -->
@@ -479,7 +255,7 @@
   <!-- row 4 -->
 
       <div class="square_w_image">
-         <img class="open" src="assets/gif/w2.gif" style="width:100%; height:100%; z-index: 10; position: absolute;" />
+         <img class="open lazy" src="assets/gif/w2.gif" style="width:100%; height:100%; z-index: 10; position: absolute;" />
       </div>
 
       <div class="square"></div>
@@ -487,7 +263,11 @@
 
       <div class="square"></div>
       <div class="square_w_image">
-        <img class="open" src="assets/still/sf00.png" style="width:100%; height:100%; z-index: 10; position: absolute;" />
+          <a href="http://storefrontnews.org" onclick="window.open(this.href, 'mywin',
+          'left=0,top=0,width=1000,height=400,toolbar=1,resizable=0'); return false;" >  
+              <img src="assets/still/sf00.png" style="width:100%; height:100%; z-index: 10; position: absolute;" />
+          </a>
+
       </div>
 
 
@@ -495,7 +275,7 @@
 
       <div class="square"></div>
 
-      <div class="square_last_col" style="pointer-events: none;">       
+      <div class="square_w_image" style="pointer-events: none; background-color: black;">       
         <img class="calendar" src="assets/still/calendar.jpg" style="width:100%; height:100%; z-index: 10; position: absolute;" /></div>
 
 
@@ -507,15 +287,15 @@
 
 
        <div class="square_z" style="pointer-events: auto;">
-        <img src="assets/gif/hash1.gif" style="width:100%; height:100%; z-index: 10; position: absolute;" />
+        <img class="lazy" src="assets/gif/hash1.gif" style="width:100%; height:100%; z-index: 10; position: absolute;" />
 
       </div>
 
-      <div class="square_z"></div>
+      <div class="square_z" style="pointer-events: none;"></div>
 
 
        <div class="square_z" style="pointer-events: auto;">
-            <img class="open" src="assets/gif/w2.gif" style="width:100%; height:100%; z-index: 10; position: absolute;" />
+            <img class="open lazy" src="assets/gif/w2.gif" style="width:100%; height:100%; z-index: 10; position: absolute;" />
       </div>
 
 
@@ -532,34 +312,45 @@
 
 
 
-    <div width=100% style="margin: 0;">
+    <div style="width: 100%; margin: 0;">
       <div class="video_home">
+
+
+          <div class="embed-container" style="z-index: 0; width: 100%;">
+
 <!--
-      <div id="player"></div>
-      <script src="http://luwes.co/vimeowrap.js/vimeowrap.js"></script>
-      <script>
-      vimeowrap('player').setup({
-        urls: [
-          'http://vimeo.com/64705340',
-          'http://vimeo.com/64705340'
-        ]
-      });
-      </script>
+
+            <div id="video-one"> -->
+
+              
+              <div class="colorband-one" style="z-index: 90; height: 8.5%;">
+                <h6 style="padding-top: 3px;">Video</h6>
+              </div>
+
+<iframe class="video" id="video0" src="http://player.vimeo.com/video/104755287?portrait=1&color=ff9933&autoplay=0&player_id=video0&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
 
 
--->
 
-          <div class="embed-container">
+              <iframe class="video" id="video1" src="http://player.vimeo.com/video/104755285?portrait=0&color=ff9933&autoplay=0&player_id=video1&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
 
-            <div class="colorband-four" style="z-index: 90; height: 10%;">
+              <iframe class="video" id="video2" src="http://player.vimeo.com/video/104755285?portrait=0&color=ff9933&autoplay=0&player_id=video2&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
+              <iframe class="video" id="video3" src="http://player.vimeo.com/video/104751662?portrait=0&color=ff9933&autoplay=0&player_id=video3&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>              
+              <iframe class="video" id="video4" src="http://player.vimeo.com/video/104751664?portrait=0&color=ff9933&autoplay=0&player_id=video4&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>              
+              <iframe class="video" id="video5" src="http://player.vimeo.com/video/104755286?portrait=0&color=ff9933&autoplay=0&player_id=video5&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
+              <iframe class="video" id="video6" src="http://player.vimeo.com/video/104755287?portrait=0&color=ff9933&autoplay=0&player_id=video6&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
+              <iframe class="video" id="video7" src="http://player.vimeo.com/video/106298529?portrait=0&color=ff9933&autoplay=0&player_id=video7&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
+              <iframe class="video" id="video8" src="http://player.vimeo.com/video/104756759?portrait=0&color=ff9933&autoplay=0&player_id=video8&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
+              <iframe class="video" id="video9" src="http://player.vimeo.com/video/106532691?portrait=0&color=ff9933&autoplay=0&player_id=video9&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
+              <iframe class="video" id="video10" src="http://player.vimeo.com/video/104558735?portrait=0&color=ff9933&autoplay=0&player_id=video10&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
 
-              <h6 style="padding-top: 4px;">New York City</h6>
+<style>
+iframe.video {
+    display: none;
+}
+</style>
 
-
-            </div>
-
-            <iframe src="http://player.vimeo.com/video/104756759?title=0&amp;byline=0&amp;portrait=0&amp;color=ff9933&amp;autoplay=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="margin-top:-1px; padding-top:0px; bottom: 0px;">Loading</iframe>
-            </div>
+          </div>
+              
 
 
       </div>
@@ -567,33 +358,34 @@
 
         <div class="col_in_col">
 
-            <div class="square_z"></div>
+            <div class="square_z" style="border-right: 1.75px solid black"></div>
 
 
            <div class="square_z">
-              <img src="assets/gif/hash2.gif" style="width:100%; height:100%; z-index: 10; position: absolute;" />
+              <img class="lazy" src="assets/gif/hash2.gif" style="width:100%; height:100%; z-index: 10; position: absolute;" />
 
             </div>
         </div>
 
 
 
+            <div class="four-squares" style="padding-bottom: 57.12%; border-top: 2px solid black;">
+              <div class="colorband-eight" style="height: 8.5%;">
 
-            <div class="four-squares">
-              <div class="colorband-three" style="height: 16%;">
-
-              <h6 style="padding-top: 4px;">Blog</h6>
+              <h6 style="padding-top: 3px;">Blog</h6>
 
 
               </div>
 
 
-            <div style="margin-top: 1em; position: relative;"> 
+          <div style="margin-top: 1em; position: absolute; width: 100%; height: 92%; overflow: hidden;"> 
 
 
-            <iframe src ="http://entirelynew.net/wwsf/blog" width="100%" style="padding-left: 0.7em; padding-top: 1.1em; padding:right: 2em; padding-bottom: 0; max-height: 28%; overflow: scroll; max-width:94%;">Loading
-              <p>Your browser does not support iframes.</p>
+            <iframe src="http://wwstorefront.org/blog/" width="100%" height="100%" style="padding-left: 0.5em; padding-top: 1.1em; padding:right: 2em; max-height: 100%; overflow: auto; max-width:94%;">Loading
+              &lt;p&gt;Your browser does not support iframes.&lt;/p&gt;
             </iframe>
+
+    
 
             </div>
 
@@ -603,69 +395,53 @@
 </div>
 
   <div class="right-col">
-           <div class="square_z_half">
+    <div style="width: 100%;">
+
+
+           <div class="square_z_half_one" style="left:1px; padding-top: 0; margin-top: 0; max-height: 171.36px; background-color: pointer-events: auto;"> 
 
 
 
-              
-              <img id="audio_on" src="assets/icons/audio.png" style="width:100%; height:100%; z-index: 10; position: absolute;" />
-       
+            <div class="sc_wrapper" style="width:100%; height: 100%; background-color: black; display:inline-block; position: absolute; pointer-events: auto">
+                  <div class="wrapped" style="width: 100%; height: 100%; max-height: 154.224px; overflow: hidden; position: absolute;">
 
-<!--<div style="width: 100%; height: 100%; overflow:hidden;">
-             <div id="audio-player" class="audio-player-wrapper">
--->
-<!--
-               <div class="audio-player-image">
-                    <span class="audio-player-song-name"></span>
-                  </div>
+                      <a style="position: relative; left: -40px top: 0; width: 100%; max-width: 154.224px;" href="https://soundcloud.com/worldwidestorefront/sets/homepage&amp;auto_play=true" class="sc-player"></a>
 
+                    </div>
 
--->
-            <!--
-                  <div class="audio-player-controls">
-                    <span class="audio-player-progress">
-                      <span class="audio-player-progress-bar"></span>
-                    </span>
-            -->
-
-                  <!--
-                    <span class="audio-player-button-wrappers">
-
-
-                      <a role="button" class="audio-player-button audio-player-place-pause-button icon-play"></a>
-
-                    </span> 
-        
-
-              <script src="js/all.js" type="text/javascript"></script>
-            </div>
-            </div>-->
-
-<!-- <div style="width: 100%; height: 100%; padding: 0; margin: 0;"> 
-
-
-              <iframe class="home_soundcloud" style="visibility:none;" width="100px" height="100px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/42389480&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-            </div>
--->
 
             </div>
 
-            <div class="square_z_half"></div>
-            <div class="square_z">              
-
-              <img src="assets/gif/w4large.gif" style="width:100%; height:100%; z-index: 10; position: absolute;" />
 
             </div>
 
+            <div class="square_z_half_two" style="left: 1px;"></div>
+      </div>
+
+
+            <div class="square_z" style="width: 100%;">   
+
+                   <a href="index.html">  
+
+              <img class="lazy" src="assets/gif/w4large.gif" style="width:100%; height:100%; z-index: 80; position: absolute; top:0;" /></a>
+            </div>            
 
       <div width=50% height=1% style="border: 1px solid black;"></div>
       <div width=50% height=1.16% style="border: 1px solid black;"></div>
 
-
-
   </div>
-
-
+</div>
+        <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script> 
+        <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> 
+        <script type="text/javascript" src="js/soundcloud.player.api.js"></script>
+        <script type="text/javascript" src="js/sc-player.js"></script>
+        <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
+        <script src="js/jquery.superslides_min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="home_min.js"></script>
+        <script src="https://w.soundcloud.com/player/api.js"></script>
 
   </body>
+
+
 </html>
