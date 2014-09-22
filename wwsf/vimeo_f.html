@@ -1,0 +1,66 @@
+<style>
+
+</style>
+<iframe class="video" id="video0" src="http://player.vimeo.com/video/104755287?portrait=1&color=ff9933&autoplay=0&player_id=video0&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
+
+
+              <iframe class="video" id="video1" src="http://player.vimeo.com/video/106597524?portrait=0&color=ff9933&autoplay=0&player_id=video1&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
+
+              <iframe class="video" id="video2" src="http://player.vimeo.com/video/104755285?portrait=0&color=ff9933&autoplay=0&player_id=video2&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
+              <iframe class="video" id="video3" src="http://player.vimeo.com/video/104751662?portrait=0&color=ff9933&autoplay=0&player_id=video3&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>              
+              <iframe class="video" id="video4" src="http://player.vimeo.com/video/104751664?portrait=0&color=ff9933&autoplay=0&player_id=video4&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>              
+              <iframe class="video" id="video5" src="http://player.vimeo.com/video/104755286?portrait=0&color=ff9933&autoplay=0&player_id=video5&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
+              <iframe class="video" id="video6" src="http://player.vimeo.com/video/106403990?portrait=0&color=ff9933&autoplay=0&player_id=video6&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
+              <iframe class="video" id="video7" src="http://player.vimeo.com/video/106298529?portrait=0&color=ff9933&autoplay=0&player_id=video7&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
+              <iframe class="video" id="video8" src="http://player.vimeo.com/video/104756759?portrait=0&color=ff9933&autoplay=0&player_id=video8&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
+              <iframe class="video" id="video9" src="http://player.vimeo.com/video/106532691?portrait=0&color=ff9933&autoplay=0&player_id=video9&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
+              <iframe class="video" id="video10" src="http://player.vimeo.com/video/104558735?portrait=0&color=ff9933&autoplay=0&player_id=video10&api=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="margin-top:7px; padding-top:0px; bottom: 0px; z-index: -100;">Loading</iframe>
+
+        <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    // Enable the API on each Vimeo video
+    jQuery('iframe.video').each(function(){
+        Froogaloop(this).addEvent('ready', ready);
+    });
+    
+    // start video loop at random position
+    var startVideoIndex = Math.floor(Math.random()*11);
+    
+    jQuery('iframe#video' + startVideoIndex).each(function(){
+        Froogaloop(this).addEvent('ready', loop_start);
+    });
+    
+    function ready(playerID){
+        console.log("ready:", playerID);
+
+        Froogaloop(playerID).addEvent('play', play);        
+        Froogaloop(playerID).addEvent('finish', fin); 
+    }
+    
+    function play(playerID){
+        console.log("playing:", playerID);
+        
+        $('#' + playerID).show();
+    }
+    
+    function fin(playerID){
+        console.log("finished:", playerID);
+        
+        var nextPlayerIndex = parseInt(playerID.match(/\d+/), 10) + 1;
+        
+        if (nextPlayerIndex > 10) { nextPlayerIndex = 0; };
+        
+        nextPlayerID = 'video' + nextPlayerIndex;
+        Froogaloop(nextPlayerID).api('play');
+        $('#' + playerID).hide();
+    }
+    
+    function loop_start(playerID){
+        console.log("loop start:", playerID);
+        
+        Froogaloop(playerID).api('play');
+    }
+});
+</script>

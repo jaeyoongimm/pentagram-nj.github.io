@@ -136,7 +136,6 @@ a:hover {
     cursor: pointer;
 }
 
-
 /*
 iframe {
   background-color: #fff;
@@ -457,11 +456,11 @@ height: 1098px;
   padding-bottom: 57.25%;
 }
 
- 
+/* 
 .js-video.vimeo {
   padding-top: 0;
 }
-
+*/
 
 #transform-border-hairline {
     border-bottom: 1px #ff0000 solid;
