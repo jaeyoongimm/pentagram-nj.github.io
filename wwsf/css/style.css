@@ -933,6 +933,10 @@ height: 1098px;
 
 }
 
+iframe.video {
+    display: none;
+}
+
 .video_home { 
 
     position: relative;
