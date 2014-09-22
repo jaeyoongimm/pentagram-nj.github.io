@@ -489,12 +489,76 @@ google.maps.event.addListener(marker_six_third, 'click', function() {
 
           });
 
- 
+           $(function() {
+            $('#slides').superslides({
+              hashchange: true,
+              play: 2500,
+              inherit_width_from: '.wide-container',
+              inherit_height_from: '.wide-container'
+            });
+
+            $('#slides').on('mouseenter', function() {
+              $(this).superslides('stop');
+              console.log('Stopped')
+            });
+            $('#slides').on('mouseleave', function() {
+              $(this).superslides('start');
+              console.log('Started')
+            });
+          });
+          
 });
 
 
+          var randomInt = function (min, max) {
+              return Math.floor(Math.random() * (max - min + 1) + min);
+          }
 
+          var showActiveVideo = function (videoID) {
+                $("#video0").hide();
+                $("#video1").hide();
+                $("#video2").hide();
+                $("#video3").hide();
+                $("#video4").hide();
+                $("#video5").hide();
+                $("#video6").hide();
+                $("#video7").hide();
+                $("#video8").hide();
+                $("#video9").hide();
+                $("#video10").hide();
 
+              $("#video" + videoID).show();
+          };
+
+          var currentVideoIndex = randomInt(0, 10);
+
+          var playNextVideo = function () {
+              var iframe, player;
+              showActiveVideo(currentVideoIndex);
+
+              console.log("playNextVideo function is running.");
+              console.log("currentVideoIndex:", currentVideoIndex);
+
+              var currentVideoId = "#video" + currentVideoIndex;
+              iframe = $(currentVideoId)[0];
+              player = $f(iframe);
+
+              console.log("currentVideoId:", currentVideoId);
+              console.log("iframe:", iframe);
+              console.log("player:", player);
+
+              player.addEvent('ready', function () {
+                  console.log("player ready");
+                  player.api('play');
+                  player.addEvent('finish', function () {
+                      console.log("player finished");
+                      currentVideoIndex = (currentVideoIndex + 1) % 10;
+                      playNextVideo();
+                  });
+              });
+          };
+
+          playNextVideo(); 
 
 
 

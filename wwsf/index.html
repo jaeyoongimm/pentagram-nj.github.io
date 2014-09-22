@@ -6,9 +6,7 @@
     <meta name="mobile-web-app-capable" content="yes">
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" type="text/css" href="css/home.css">
-
+        <link rel="stylesheet" type="text/css" href="css/styleminHome.css">
     <link rel="stylesheet" href="css/sc-player-standard.css" type="text/css">
 
   </head>
@@ -410,17 +408,7 @@ iframe.video {
                       <a style="position: relative; left: -40px top: 0; width: 100%; max-width: 154.224px;" href="https://soundcloud.com/worldwidestorefront/sets/homepage&amp;auto_play=true" class="sc-player"></a>
 
                     </div>
-<!--
 
-                  <div style="float: left; top: 0; left:0;"> 
-                  <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" style="max-width:100%;" width="100%" height="600" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">  --> <!--
-                    <param name="allowscriptaccess" value="always" />
-                    <param class="lazy" name="src" value="http://player.soundcloud.com/player.swf?url=https://w.soundcloud.com/player/?url=https://soundcloud.com/worldwidestorefront/sets/homepage&amp;auto_play=true&amp;player_type=artwork&amp;color=999999&amp;sharing=false&amp;show_playcount=false" />-->
-                 <!--   <iframe id="soundcloud_player" class="lazy" type="application/x-shockwave-flash" width="100%" height="600" src="http://player.soundcloud.com/player.swf?url=https://soundcloud.com/worldwidestorefront/sets/homepage&amp;auto_play=true&amp;player_type=artwork&amp;color=999999&amp;sharing=false&amp;show_playcount=false" allowscriptaccess="always">
-                    </iframe>
-                  </object>
-                  </div>
-                  </div>-->
 
             </div>
 
@@ -443,271 +431,17 @@ iframe.video {
 
   </div>
 </div>
-  </body>
         <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script> 
         <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> 
         <script type="text/javascript" src="js/soundcloud.player.api.js"></script>
         <script type="text/javascript" src="js/sc-player.js"></script>
-
-        <script src="js/lazyload.js"></script>
-        <script src="home.js"></script>
         <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
-
-<script> 
-
-          var randomInt = function (min, max) {
-              return Math.floor(Math.random() * (max - min + 1) + min);
-          }
-
-          var showActiveVideo = function (videoID) {
-                $("#video0").hide();
-                $("#video1").hide();
-                $("#video2").hide();
-                $("#video3").hide();
-                $("#video4").hide();
-                $("#video5").hide();
-                $("#video6").hide();
-                $("#video7").hide();
-                $("#video8").hide();
-                $("#video9").hide();
-                $("#video10").hide();
-
-              $("#video" + videoID).show();
-          };
-
-          var currentVideoIndex = randomInt(0, 10);
-
-          var playNextVideo = function () {
-              var iframe, player;
-              showActiveVideo(currentVideoIndex);
-
-              console.log("playNextVideo function is running.");
-              console.log("currentVideoIndex:", currentVideoIndex);
-
-              var currentVideoId = "#video" + currentVideoIndex;
-              iframe = $(currentVideoId)[0];
-              player = $f(iframe);
-
-              console.log("currentVideoId:", currentVideoId);
-              console.log("iframe:", iframe);
-              console.log("player:", player);
-
-              player.addEvent('ready', function () {
-                  console.log("player ready");
-                  player.api('play');
-                  player.addEvent('finish', function () {
-                      console.log("player finished");
-                      currentVideoIndex = (currentVideoIndex + 1) % 10;
-                      playNextVideo();
-                  });
-              });
-          };
-
-          playNextVideo(); 
-
-          /*
-
-            var randNum = Math.floor(Math.random()*11);
-            var currentVideoIndex = randNum;
-
-
-            var vimeoid = ['104755287', '106597524', '104755285', '104751662', '104751664', '104755286', '106403990', '106298529', '104756759', '106532691', '104558735'];
-
-            var playVimeo = function (){
-
-
-
-
-            };
-
-
-            var playRandomVideo = function () {
-                $("#video0").hide();
-                $("#video1").hide();
-                $("#video2").hide();
-                $("#video3").hide();
-                $("#video4").hide();
-                $("#video5").hide();
-                $("#video6").hide();
-                $("#video7").hide();
-                $("#video8").hide();
-                $("#video9").hide();
-                $("#video10").hide();
-                $("#video" + currentVideoIndex).show();
-                console.log("playRandomVideo function is running.");
-
-                var currentVideoId = "#video" + currentVideoIndex;
-                iframe = $(currentVideoId)[0];
-                player = $f(iframe);
-
-                player.addEvent('ready', function() { 
-                    player.api('play');
-                });
-
-
-            };
-
-            var showActiveVideo = function (videoID) {
-                $("#video0").hide();
-                $("#video1").hide();
-                $("#video2").hide();
-                $("#video3").hide();
-                $("#video4").hide();
-                $("#video5").hide();
-                $("#video6").hide();
-                $("#video7").hide();
-                $("#video8").hide();
-                $("#video9").hide();
-                $("#video10").hide();
-                $("#video" + videoID).show();
-            };
-
-            var playNextVideo = function () {
-                var iframe, player;
-                showActiveVideo(currentVideoIndex);
-                console.log("playNextVideo function is running.");
-                console.log("currentVideoIndex:", currentVideoIndex);
-
-                var currentVideoId = "#video" + currentVideoIndex;*/
-               /*iframe = $(currentVideoId)[0];*//*
-                var iframe = document.getElementById(currentVideoId)[0];
-                var player = $f(iframe);
-
-
-                console.log("currentVideoId:", currentVideoId);
-                console.log("iframe:", iframe);
-                console.log("player:", player);
-
-                player.addEvent('ready', function () {
-                    console.log("player ready");
-                    player.api('play');
-                    player.addEvent('finish', function () {
-                        console.log("player finished");
-                        currentVideoIndex = ((currentVideoIndex + 1) % 10);
-                        playNextVideo();
-                    });
-                });
-            };
-
-            playNextVideo();*/
-
-        </script>
-
         <script src="js/jquery.superslides_min.js" type="text/javascript" charset="utf-8"></script>
-
+        <script src="home_min.js"></script>
         <script src="https://w.soundcloud.com/player/api.js"></script>
 
-        <script>
-        
-          <!--superslider -->
-          $(function() {
-            $('#slides').superslides({
-              hashchange: true,
-              play: 2500,
-              inherit_width_from: '.wide-container',
-              inherit_height_from: '.wide-container'
-            });
-
-            $('#slides').on('mouseenter', function() {
-              $(this).superslides('stop');
-              console.log('Stopped')
-            });
-            $('#slides').on('mouseleave', function() {
-              $(this).superslides('start');
-              console.log('Started')
-            });
-          });
-          
-          <!--superslider -->
-
-          <!--vimeo code -->
-/*
-$(document).ready(function() {
-    // Enable the API on each Vimeo video
-    jQuery('iframe.video').each(function(){
-        Froogaloop(this).addEvent('play', play);
-        Froogaloop(this).addEvent('ready', ready);
-    });
-    
-    // start video loop at random position
-    var startVideoIndex = Math.floor(Math.random()*11);
-    
-    jQuery('iframe#video' + startVideoIndex).each(function(){
-        Froogaloop(this).addEvent('ready', loop_start);
-    });
-    
-    function ready(playerID){
-        console.log("ready:", playerID);
-        
-        Froogaloop(playerID).addEvent('finish', fin); 
-    }
-    
-    function play(playerID){
-        console.log("playing:", playerID);
-
-        $('#' + playerID).show();
-    }
-    
-    function fin(playerID){
-        console.log("finished:", playerID);
-        
-        var nextPlayerIndex = parseInt(playerID.match(/\d+/), 10) + 1;
-        
-        if (nextPlayerIndex > 10) { nextPlayerIndex = 0; };
-        
-        nextPlayerID = 'video' + nextPlayerIndex;
-        Froogaloop(nextPlayerID).api('play');
-        $('#' + playerID).hide();
-    }
-    
-    function loop_start(playerID){
-        console.log("loop start:", playerID);
-        Froogaloop(playerID).api('play');
-    }
-});
-
-
-            $(function() {
-              console.log("vimeo function is running.");
-              var currentVideoIndex = 0;
-              var iframe, player;
-              var playNextVideo = function() {
-                console.log("playNextVideo function is running.");
-                console.log("currentVideoIndex:", currentVideoIndex);
-          
-                var currentVideoId = "#video" + currentVideoIndex;
-                iframe = $(currentVideoId)[0];
-                player = $f(iframe);
-                
-                console.log("currentVideoId:", currentVideoId);
-                console.log("iframe:", iframe);
-                console.log("player:", player);
-          
-                player.addEvent('ready', function() {
-                  console.log("player ready");
-
-                  player.addEvent('finish', function(){
-                    console.log("player finished");
-                    playNextVideo();
-                  });
-
-                  player.api('play');
-                });
-                
-                currentVideoIndex = currentVideoIndex + 1;
-                
-                console.log("currentVideoIndex:", currentVideoIndex);
-          
-              };
-          
-              playNextVideo();
-          });
-          */
-          <!--vimeo code -->
-
-
-        </script>
+  </body>
 
 
 </html>
